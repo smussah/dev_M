@@ -1,0 +1,116 @@
+---
+title: About Jim Hopper
+custom_title:
+class: about topic
+permalink: /about/
+imagepath: /assets/images/jim.jpg
+sidebar_one: false
+sidebar_two: true
+sidebar_three: false
+sidebar_four: false
+og_image_path: /uploads/facebook-home.jpg
+---
+
+<main>
+
+  <section class="hero page">
+    <div class="container">
+      <div class="inner-wrapper">
+      {% assign customTitleSize = page.custom_title | size %}
+      {% if customTitleSize > 0 %}
+      <h1>{{page.custom_title}}</h1>{% else %}<h1>{{page.title}}</h1>{% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% if page.imagepath %}
+    <div class="container">
+      <img class="jim" src="{{ page.imagepath }}" alt="" />
+    </div>
+  {% endif %}
+
+  <section class="article">
+    <div class="container">
+      <div class="copy editable">
+        <h2>Nationally recognized consultant, trainer and lecturer.</h2>
+        <p>My research and work as a consultant have helped therapists, police officers, prosecutors, judges, senior military commanders and higher education administrators to better understand and respond to victims of child abuse and sexual assault.</p>
+        <p>I am most often sought for my expertise on <a href="/sexual-assault-and-the-brain/">the neurobiology of trauma and sexual assault</a>, and on the unique experiences and needs of males who have experienced sexual abuse or sexual assault.</p>
+        <p>I also train and consult on how meditation and other contemplative practices can transform <a href="/brain-healing-and-happiness/overview/">the brain</a> to bring healing and genuine happiness, and am co-editor of <a href="http://www.amazon.com/Mindfulness-Oriented-Interventions-Trauma-Integrating-Contemplative/dp/1462518583/ref=nosim/?tag=jimhoppercom-20/">Mindfulness-Oriented Interventions for Trauma: Integrating Contemplative Practices</a>&nbsp;(Guilford Press, 2015).</p>
+        <p>I conduct trainings across the United States and internationally. I also serve as an expert witness in both criminal and civil cases, and have worked on cases in state, federal and military courts.</p>
+        <p>I was a founding board member of <a href="http://www.1in6.org">1in6, Inc.</a>, a national non-profit devoted to serving men who've had unwanted or abusive sexual experiences as boys, and wrote most of the content on 1in6's comprehensive web site.</p>
+        <p>I'm committed to educating the public, including through my <a href="https://www.psychologytoday.com/blog/sexual-assault-and-the-brain">blog</a> on Psychology Today and media engagements. I enjoy conversation with thoughtful journalists&nbsp; and have been quoted by the New York Times, Washington Post, Associated Press, ABC News, USA Today, PBS, and other national and local media.</p>
+        <p>Finally, I am a Teaching Associate in Psychology in the Department of Psychiatry of Harvard Medical School, and a consultant to the Outpatient Addictions Service of the Cambridge Health Alliance.</p>
+        <div class="share">
+          <!--base32-c9gq6t9k68pp6eb7e4v78ebb6rw70utrcctq8dkjegtpervme9hpuxvgdnvk6cv3e9vppd3m6djp6y3j6tpqgu3bchq6mdv5f4rppthnetrp6xkb6cvkaw9kcdt64uk5ehr6ptbpc8vkcy3m6dkp6u38cdhqew9jexh32thge9nk0t9tehj6wwhqc5jk2uhq65n3etvqd1rkccbn6ru7au3d6wrqgctpexnpwdtme8v3cx1kcwv74x1qcnw6prhpf1r70tv4dctpae3qdcr74xkdcdw6wdv1f0tk4rved9rkgxbbcxjkjxhqcdu7ccv4dtpk6d336dn66ebe6rw68rhqcgwqawb1cdu78rv4dmv6ut3b65jq8v9qcxj32x35dnv6pe3t6ct3cvbn6dkqju3bcmwpgdv3cmwq2t9tddnp6wk2e1hkgwkg71j64ttp71t34xbjdcrpat3adcv66ttdc9gq6t9k68-base32--><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.jimhopper.com/about/"><i class="fa fa-facebook" aria-hidden="true"></i> share</a> <a target="_blank" href="https://twitter.com/share?url=http://www.jimhopper.com/about/&amp;text= &gt; About Jim Hopper"><i class="fa fa-twitter" aria-hidden="true"></i> tweet</a></div>
+      </div>
+
+      {% if page.sidebar_one %}
+        <div class="custom_sidebar first">
+          <div class="sidebar__inner editable"><p class="sidebar__header present-before-paste">LINK TO SERVICES and OP Eds HERE?</p><p class="present-before-paste">this is content inside a sidebar</p></div>
+        </div>
+      {% endif %}
+
+      {% if page.sidebar_two %}
+        <div class="custom_sidebar">
+          <div class="sidebar__inner editable"><p class="sidebar__header present-before-paste">curriculum vitae</p><p class="present-before-paste">Updated every three months, including most recent trainings.</p><p class="present-before-paste"><a href="/pdf/DrJimHopperCV.pdf">Download</a></p></div>
+        </div>
+      {% endif %}
+
+      {% if page.sidebar_three %}
+        <div class="custom_sidebar">
+          <div class="sidebar__inner editable">
+            <p class="sidebar__header">Sidebar</p>
+            <p>this is content inside a sidebar </p>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.sidebar_four %}
+        <div class="custom_sidebar">
+          <div class="sidebar__inner editable">
+            <p class="sidebar__header">Sidebar</p>
+            <p>this is content inside a sidebar </p>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </section>
+
+
+  <section class="suggested">
+    <div class="container">
+      <div class="suggestions">
+
+          <div class="prev">
+          {% if prevurl %}
+          <div class="prev-inner">
+            <a href="{{prevurl}}">
+              <p class="prev__header"> <i class="fa fa-chevron-left" aria-hidden="true"></i>
+Previous</p>
+              <p class="prev__title">{{ prevTitle }}</p>
+            </a>
+          </div>
+          {% endif %}
+          </div>
+
+          <div class="next">
+          {% if nexturl %}
+          <div class="next-inner">
+            <a href="{{nexturl}}">
+              <p class="next__header">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+              <p class="next__title">{{ nextTitle }}</p>
+            </a>
+          </div>
+          {% endif %}
+          </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+</main>
+
