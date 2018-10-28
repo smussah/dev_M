@@ -1,4 +1,71 @@
 {% if site[page.topic]  %}
+ <head>
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script>
+//     Sidebar scrolling.. sm
+        $(function() {
+            var offset = $(".sidebar").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $(".sidebar").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+
+                    });
+
+
+                } else {
+                    $(".sidebar").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+
+         $(function() {
+            var offset2 = $("#hotlines").offset();
+            var topPadding2 = 0;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset2.top) {
+                    $("#hotlines").stop().animate({
+                     marginTop: 0
+                    });
+                } else {
+                    $("#hotlines").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+
+        });
+
+
+
+     //     Sidebar hovereffects.. sm
+      $( ".sidebar__items li" ).hover(
+  function() {
+    $( this ).append( $( "<span>√√</span>" ) );
+
+  }, function() {
+    $( this ).find( "span:last" ).remove();
+  }
+);
+
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+
+
+
+// $(".sidebar ul.sidebar__items li ").css("margin-top: 10px", " text-decoration: none")
+
+
+
+
+
+    </script>
+    </head>
 
 <div class="sidebar">
   <div class="sidebar__inner">
@@ -55,3 +122,5 @@
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
+
+
