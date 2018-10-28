@@ -861,7 +861,7 @@ h4 {
     .sidebar ul.sidebar__items li a {
       color: #82816f !important;
       text-decoration: none !important;
-      border-bottom: 1px solid #9b9a89; }
+      border-bottom: 0px solid #9b9a89; }
   .sidebar ul.sidebar__items li.current a {
     color: #689700 !important;
     font-weight: bold; }
@@ -877,7 +877,7 @@ h4 {
         font-weight: normal; }
     .sidebar ul.sidebar__items ul.sub li.current a {
       color: #689700 !important;
-      border-bottom: 1px solid #689700;
+      border-bottom: 0px solid #689700 !important;
       font-weight: bold; }
 
 .sidebar li.hotline {
@@ -2087,7 +2087,7 @@ body.grid:before {
   width: 100%;
   position: absolute; }
 
-    /****** sidebar styling ... SM 10/28/2018*******/
+  /******SM*******/
   .sidebar ul.sidebar__items li{
       margin-top: 10px;
       text-decoration: none;
@@ -2095,7 +2095,7 @@ body.grid:before {
 
   }
 
-  .sidebar__items li {
+.sidebar__items li {
   transition: 0.4s;
   color: #ffffff;
   font-size: 20px;
@@ -2108,6 +2108,5 @@ body.grid:before {
  color: #EEA200;
   padding: 24px 10px;
  }
-
 
 /*# sourceMappingURL=style.css.map */
