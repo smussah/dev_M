@@ -2087,4 +2087,27 @@ body.grid:before {
   width: 100%;
   position: absolute; }
 
+    /****** sidebar styling ... SM 10/28/2018*******/
+  .sidebar ul.sidebar__items li{
+      margin-top: 10px;
+      text-decoration: none;
+    border-bottom: 0px solid #9b9a89;
+
+  }
+
+  .sidebar__items li {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
+ text-decoration: none;
+ padding: 0 10px;
+  margin: 0 10px;
+ }
+.sidebar__items li:hover {
+  background-color: #ffffff;
+ color: #EEA200;
+  padding: 24px 10px;
+ }
+
+
 /*# sourceMappingURL=style.css.map */
