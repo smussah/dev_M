@@ -5,7 +5,8 @@
     <script>
 //     Sidebar scrolling.. sm
         $(function() {
-             var footer_top = $("footer").offset();
+              var sb_height = $(".sidebar").height();
+             var footer_top = $(".footer").offset();
             var offset = $(".sidebar").offset();
             var topPadding = 15;
             $(window).scroll(function() {
