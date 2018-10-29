@@ -2091,8 +2091,8 @@ body.grid:before {
   .sidebar ul.sidebar__items li{
       margin-top: 10px;
       text-decoration: none;
-    border-bottom: 0px solid teal;
-    list-style-type: circle;
+    border-bottom: 0px solid ;
+    list-style-type: circle green;
 
   }
 
