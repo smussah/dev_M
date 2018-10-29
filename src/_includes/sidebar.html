@@ -4,30 +4,8 @@
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
     <script>
 //     Sidebar scrolling.. sm
-        // $(function() {
-        //     var offset = $(".sidebar").offset();
-        //     var topPadding = 15;
-        //     $(window).scroll(function() {
-        //         if ($(window).scrollTop() > offset.top) {
-        //             $(".sidebar").stop().animate({
-        //                 marginTop: $(window).scrollTop() - offset.top + topPadding
-
-        //             });
-
-
-        //         } else {
-        //             $(".sidebar").stop().animate({
-        //                 marginTop: 0
-        //             });
-        //         };
-        //     });
-        // });
-
- $(function() {
-    var window_top = $(window).scrollTop();
-       var footer_top = $("#footer").offset().top;
-    var sb_height = $(".sidebar").height();
-    
+        $(function() {
+             var footer_top = $("footer").offset();
             var offset = $(".sidebar").offset();
             var topPadding = 15;
             $(window).scroll(function() {
@@ -36,18 +14,21 @@
                         marginTop: $(window).scrollTop() - offset.top + topPadding
 
                     });
+                     if ($(window).scrollTop() < footer_top.top) {
+                    $(".sidebar").stop().animate({
+                        marginBottom: 0
 
-                } 
-                  if (window_top + sb_height > footer_top){
-                 $('.sidebar').css('position', 'fixed'); }
-                
-                else {
+                    });
+
+
+                } else {
                     $(".sidebar").stop().animate({
                         marginTop: 0
                     });
                 };
             });
         });
+
          $(function() {
             var offset2 = $("#hotlines").offset();
             var topPadding2 = 0;
