@@ -2100,7 +2100,7 @@ body.grid:before {
 
 .sidebar__items li {
   transition: 0.4s;
-  color: #ffffff;
+  color: teal;
   font-size: 25px;
  text-decoration: none;
  padding: 0 10px;
