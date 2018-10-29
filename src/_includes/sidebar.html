@@ -44,7 +44,7 @@
      //     Sidebar hovereffects.. sm
       $( ".sidebar__items li" ).hover(
   function() {
-    $( this ).append( $( "<span>√√</span>" ) );
+    $( this ).append( $( "<span>|</span>" ) );
 
   }, function() {
     $( this ).find( "span:last" ).remove();
@@ -60,7 +60,14 @@ $( "li.fade" ).hover(function() {
 
 // $(".sidebar ul.sidebar__items li ").css("margin-top: 10px", " text-decoration: none")
 
-
+$(window).on("scroll", function() {
+	var scrollHeight = $(document).height();
+	var scrollPosition = $(window).height() + $(window).scrollTop();
+	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+	    // when scroll to bottom of the page
+	    window.addEventListener('"#hotlines', noscroll);
+	}
+});
 
 
 
