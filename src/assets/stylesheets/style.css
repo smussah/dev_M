@@ -2092,7 +2092,9 @@ body.grid:before {
       margin-top: 10px;
       text-decoration: none;
     border-bottom: 0px solid ;
-    list-style-type: circle green;
+    list-style-type: circle;
+    color: black;
+    font-size: 20px;
 
   }
 
