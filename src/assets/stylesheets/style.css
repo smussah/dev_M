@@ -2092,6 +2092,7 @@ body.grid:before {
       margin-top: 10px;
       text-decoration: none;
     border-bottom: 0px solid #9b9a89;
+    list-style-type: circle;
 
   }
 
