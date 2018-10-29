@@ -13,7 +13,7 @@
 //     Sidebar scrolling.. sm
         $(function() {
               var sb_height = $(".sidebar").height();
-             var footer_top = $(".footer").offset();
+             var footer_top = $("footer").offset();
             var offset = $(".sidebar").offset();
             var topPadding = 15;
             $(window).scroll(function() {
@@ -25,7 +25,7 @@
                     
                 }
                     
-                     else if ($(window).scrollTop()+sb_height > footer_top.top) {
+                     else if ($(window).scrollTop() > footer_top.top) {
                     $(".sidebar").addClass('.stick');
 
                 
