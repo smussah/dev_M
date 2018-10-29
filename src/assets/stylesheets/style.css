@@ -2095,19 +2095,19 @@ body.grid:before {
 
   }
 
-.sidebar__items li {
-  transition: 0.4s;
-  color: #ffffff;
-  font-size: 20px;
- text-decoration: none;
- padding: 0 10px;
-  margin: 0 10px;
- }
-.sidebar__items li:hover {
-  background-color: #ffffff;
- color: #EEA200;
-  padding: 24px 10px;
- }
+/*.sidebar__items li {*/
+/*  transition: 0.4s;*/
+/*  color: #ffffff;*/
+/*  font-size: 20px;*/
+/* text-decoration: none;*/
+/* padding: 0 10px;*/
+/*  margin: 0 10px;*/
+/* }*/
+/*.sidebar__items li:hover {*/
+/*  background-color: #ffffff;*/
+/* color: #EEA200;*/
+/*  padding: 24px 10px;*/
+/* }*/
 
 .sidebar__items li {
   transition: 0.3s ease;
