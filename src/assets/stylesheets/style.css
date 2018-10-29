@@ -2109,4 +2109,20 @@ body.grid:before {
   padding: 24px 10px;
  }
 
+.sidebar__items li {
+  transition: 0.3s ease;
+  background: #3fa46a;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid #3fa46a;
+  border-bottom: 4px solid #3fa46a;
+  padding: 20px 0;
+  margin: 0 20px;
+}
+.sidebar__items li:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0; 
+}
 /*# sourceMappingURL=style.css.map */
