@@ -2100,8 +2100,8 @@ body.grid:before {
   color: #ffffff;
   font-size: 20px;
  text-decoration: none;
- padding: 0 15px;
-  margin: 0 15px;
+ padding: 5 15px;
+  margin: 5 15px;
  }
 .sidebar__items li:hover {
   background-color: #ffffff;
