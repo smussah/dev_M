@@ -2107,7 +2107,7 @@ body.grid:before {
   border-left: 4px solid green;
   background-color: #ffffff;
  color: #EEA200;
- margin-left: 10px;
+ padding-left: 30px;
   padding: 10px 10px;
  }
 
