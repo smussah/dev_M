@@ -2102,7 +2102,7 @@ body.grid:before {
  text-decoration: none;
  padding: 0 10px;
   margin: 0 10px;
-    font-size: 1em;
+    font-size: 1.5em;
  
   -webkit-transition: font-size .5s ease;
   -moz-transition: font-size .5s ease;
@@ -2113,7 +2113,7 @@ body.grid:before {
   border-left: 4px solid green;
   background-color: #ffffff;
  color: #EEA200;
- font-size: 1.5em;
+ font-size: 2.5em;
   padding: 10px 10px;
  }
 
