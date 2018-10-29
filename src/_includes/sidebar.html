@@ -4,7 +4,30 @@
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
     <script>
 //     Sidebar scrolling.. sm
-        $(function() {
+        // $(function() {
+        //     var offset = $(".sidebar").offset();
+        //     var topPadding = 15;
+        //     $(window).scroll(function() {
+        //         if ($(window).scrollTop() > offset.top) {
+        //             $(".sidebar").stop().animate({
+        //                 marginTop: $(window).scrollTop() - offset.top + topPadding
+
+        //             });
+
+
+        //         } else {
+        //             $(".sidebar").stop().animate({
+        //                 marginTop: 0
+        //             });
+        //         };
+        //     });
+        // });
+
+ $(function() {
+    var window_top = $(window).scrollTop();
+       var footer_top = $("#footer").offset().top;
+    var sb_height = $(".sidebar").height();
+    
             var offset = $(".sidebar").offset();
             var topPadding = 15;
             $(window).scroll(function() {
@@ -14,15 +37,17 @@
 
                     });
 
-
-                } else {
+                } 
+                  if (window_top + sb_height > footer_top){
+                 $('.sidebar').css('positon', 'fixed'); }
+                
+                else {
                     $(".sidebar").stop().animate({
                         marginTop: 0
                     });
                 };
             });
         });
-
          $(function() {
             var offset2 = $("#hotlines").offset();
             var topPadding2 = 0;
@@ -39,13 +64,7 @@
             });
 
         });
-var sc = $('.footer').offset().top;
-var footerTop = (sc - $(window).scrollTop());
-if(offset  > footerTop ){  $("#hotlines").stop().animate({
-                   positon: fixed
-                    });} else {  $("#hotlines").stop().animate({
-                     marginTop: 0
-                    });}
+
 
      //     Sidebar hovereffects.. sm
       $( ".sidebar__items li" ).hover(
