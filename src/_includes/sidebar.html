@@ -69,12 +69,13 @@ $( "li.fade" ).hover(function() {
   $( this ).fadeIn( 500 );
 });
 
+// mobile site/size hide side bar
+$(window).resize(function(){
+	if ($(window).width() <=1366){
 
-
-// $(".sidebar ul.sidebar__items li ").css("margin-top: 10px", " text-decoration: none")
-
-
-
+    $(".siderbar").hide();
+	}
+});
     </script>
     </head>
 
