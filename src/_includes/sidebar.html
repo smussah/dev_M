@@ -11,32 +11,29 @@
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
     <script>
 //     Sidebar scrolling.. sm
-        $(function() {
-              var sb_height = $(".sidebar").height();
-             var footer_top = $("footer").offset();
-            var offset = $(".sidebar").offset();
-            var topPadding = 15;
+
+    $(function() {
+    var footer_offset = $(".footer").offset(); //footer offset
+    var sidebar_offset = $(".sidebar").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $(".sidebar").outerHeight() - 30;//footer position
+    var topPadding = 15;
             $(window).scroll(function() {
-                if ($(window).scrollTop() > offset.top) {
+                if ($(window).scrollTop() > sidebar_offset.top) {
+                    if(  $(window).scrollTop() < footer_position ) {
                     $(".sidebar").stop().animate({
-                        marginTop: $(window).scrollTop() - offset.top + topPadding
-
+                        marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
                     });
-                    
+
                 }
-                    
-                     else if ($(window).scrollTop() > footer_top.top) {
-                    $(".sidebar").addClass('.stick');
 
-                
-
-                } else {
+                else {
                     $(".sidebar").stop().animate({
                         marginTop: 0
                     });
                 };
             });
         });
+
 
          $(function() {
             var offset2 = $("#hotlines").offset();
