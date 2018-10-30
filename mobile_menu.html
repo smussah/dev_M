@@ -1,0 +1,33 @@
+
+{% if site[page.topic]  %}
+
+<div class="sidebar">
+  <div class="sidebar__inner">
+    <p class="sidebar__header">in this topic _ new sidebar for test </p>
+      <ul class="sidebar__items">
+        {% assign sorted = site[page.topic] | sort: 'order' %}
+        {% assign sorted = sorted | where: "published", "true" %}
+        {% for doc in sorted %}
+        {% assign current = nil %}
+          {% if page.url contains doc.url %}
+              {% assign current = 'current' %}
+          {% endif %}
+        <li class="{{current}}"><a href="{{doc.url}}">{{doc.title}}</a>
+          {% if page.url contains doc.subcollection %}
+            <ul class="sidebar__items sub">
+              {% assign sortedInfo = site[doc.subcollection] | sort: 'order' %}
+              {% for doc in sortedInfo %}
+              {% assign current = nil %}
+                {% if page.url contains doc.url %}
+                    {% assign current = 'current' %}
+                {% endif %}
+                <li class="{{current}}"><a href="{{doc.url}}">{{doc.title}}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+{% endif %}
