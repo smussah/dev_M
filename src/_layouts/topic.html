@@ -148,12 +148,12 @@ function mobileNav() {
   }
 }
 // mobile site/size hide side bar
-// $(window).resize(function(){
-// 	if ($(window).width() > 1366){
-//
-//     $(".mobile_nav_container").hide();
-// 	}
-// });
+$(window).resize(function(){
+	if ($(window).width() <1366){
+
+    $(".mobile_nav_container").show();
+	}
+});
 
 // stick mobile menus
 
