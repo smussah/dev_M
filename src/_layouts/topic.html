@@ -146,7 +146,7 @@ display: none;
 </style>
 </head>
   <!-- Simulate a smartphone / tablet -->
-<div class="mobile_nav_container">
+<div id="m" class="mobile_nav_container">
 
 <!-- Top Navigation Menu -->
 <div class="mobile_nav">
@@ -177,7 +177,7 @@ function mobileNav() {
 
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementsByClassName("mobile_nav_container");
+var navbar = document.getElementsByClassName("m");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
