@@ -65,7 +65,37 @@ layout: default
       </div>
     </div>
   </section>
-<!--   start of mobile nave sm  -->
+
+
+
+  <section class="article">
+    <div class="container">
+      <div class="copy">
+        <div class="content-wrapper">
+          {{ content }}
+        </div>
+        <div class="share">
+          <!-- <a href="mailto:?subject={{page.topic}} | {{page.title}}"><i class="fa fa-envelope" aria-hidden="true"></i> email</a> -->
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"><i class="fa fa-facebook" aria-hidden="true"></i> share</a>
+          {% capture url %}http://{{site.url}}{{page.url}}{% endcapture %}
+          {% if page.custom_title %}{% capture title %}{{page.custom_title}}{% endcapture %}{% else %}{% capture title %}{{page.title}}{% endcapture %}{% endif %}
+          <a target="_blank" href="https://twitter.com/share?url={{url}}&text={{title | escape}}"><i class="fa fa-twitter" aria-hidden="true"></i> tweet</a>
+
+
+
+
+
+        </div>
+      </div>
+      <div class="hide-s hide-m show-l">
+
+        {% include sidebar.html %}
+      </div>
+
+    </div>
+
+
+    <!--   start of mobile nave sm  -->
 
 <!--   ****** -->
   <head>
@@ -161,33 +191,6 @@ function mobileNav() {
 
 <!-- end of mobile nav sm -->
 
-
-
-  <section class="article">
-    <div class="container">
-      <div class="copy">
-        <div class="content-wrapper">
-          {{ content }}
-        </div>
-        <div class="share">
-          <!-- <a href="mailto:?subject={{page.topic}} | {{page.title}}"><i class="fa fa-envelope" aria-hidden="true"></i> email</a> -->
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"><i class="fa fa-facebook" aria-hidden="true"></i> share</a>
-          {% capture url %}http://{{site.url}}{{page.url}}{% endcapture %}
-          {% if page.custom_title %}{% capture title %}{{page.custom_title}}{% endcapture %}{% else %}{% capture title %}{{page.title}}{% endcapture %}{% endif %}
-          <a target="_blank" href="https://twitter.com/share?url={{url}}&text={{title | escape}}"><i class="fa fa-twitter" aria-hidden="true"></i> tweet</a>
-
-
-
-
-
-        </div>
-      </div>
-      <div class="hide-s hide-m show-l">
-
-        {% include sidebar.html %}
-      </div>
-
-    </div>
   </section>
 
 
