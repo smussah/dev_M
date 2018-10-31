@@ -158,6 +158,24 @@ function mobileNav() {
 }
 // mobile site/size hide side bar
 
+         $(function() {
+            var offset3 = $(".mobile_nav_container").offset();
+            var topPadding3 = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset3.top) {
+
+                    $(".mobile_nav_container").stop().animate({
+                     marginTop: 0
+                    });
+
+                } else {
+                    $(".mobile_nav_container").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+
+        });
 
 // stick mobile menus
 
