@@ -148,11 +148,35 @@ function mobileNav() {
 }
 // mobile site/size hide side bar
 $(window).resize(function(){
-	if ($(window).width() => 1366){
+	if ($(window).width() > 1366){
 
     $(".mobile_nav_container").hide();
 	}
 });
+
+// stick mobile menus
+  $(function() {
+    var footer_offset = $(".footer").offset(); //footer offset
+    var sidebar_offset = $(".mobile_nav_container").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $(".mobile_nav_container").outerHeight() - 30;//footer position
+    var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > sidebar_offset.top) {
+                    if(  $(window).scrollTop() < footer_position ) {
+                    $(".mobile_nav_container").stop().animate({
+                        marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
+                    });
+
+                }
+                }
+                else {
+                    $(".mobile_nav_container").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+
 </script>
 
 <!-- end of mobile nav sm -->
