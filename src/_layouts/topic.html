@@ -71,6 +71,7 @@ layout: default
   <head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 <style>
 
 .mobile_nav {
@@ -92,7 +93,7 @@ layout: default
 }
 
 .mobile_nav a.icon {
-  background: black;
+  background: #f10a58;
   display: block;
   position: absolute;
   right: 0;
@@ -145,6 +146,13 @@ function mobileNav() {
 
   }
 }
+// mobile site/size hide side bar
+$(window).resize(function(){
+	if ($(window).width() < 1366){
+
+    $(".mobile_nav_container").hide();
+	}
+});
 </script>
 
 <!-- end of mobile nav sm -->
