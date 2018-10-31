@@ -1,10 +1,10 @@
 
-{% if site[page.topic]  %}
+    {% if site[page.topic]  %}
 
-<div class="sidebar">
-  <div class="sidebar__inner">
-    <p class="sidebar__header">in this topic _ new sidebar for test </p>
-      <ul class="sidebar__items">
+<div class="sidebar1">
+  <div class="sidebar__inner1">
+    <p class="sidebar__header1">in this topic _ new sidebar for test </p>
+      <ul class="mobile_nav_items">
         {% assign sorted = site[page.topic] | sort: 'order' %}
         {% assign sorted = sorted | where: "published", "true" %}
         {% for doc in sorted %}

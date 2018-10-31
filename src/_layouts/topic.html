@@ -108,6 +108,74 @@ layout: default
   background-color: #4CAF50;
   color: white;
 }
+
+
+
+
+
+
+
+
+
+/* close and open nave icons sm begins */
+.side_nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #14cde4b0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side_nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FF9800;
+    display: block;
+    transition: 0.3s;
+}
+
+.side_nav a:hover {
+    color: #f1f1f1;
+}
+
+.side_nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #FF9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #19c2d8;
+}
+
+#nav_icon{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .side_nav {padding-top: 15px;}
+    .side_nav a {font-size: 18px;}
+}
+/* close and open nave icons css sm ends */
+
 </style>
 </head>
   <!-- Simulate a smartphone / tablet -->
@@ -168,11 +236,40 @@ function mobileNav() {
     nav.style.display = "none";
   } else {
     nav.style.display = "block";
+
   }
 }
 </script>
 
 <!-- end of mobile nav sm -->
+
+
+
+<!-- /* close and open nave icons sm begins */ -->
+<div id="myside_nav" class="side_nav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i> </a>
+
+      {% include mobile_menu.html %}
+
+</div>
+
+<div id="nav_icon">
+  <button class="openbtn" onclick="openNav()"> <i class="fa fa-bars"></i> More topic menus</button>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("myside_nav").style.width = "250px";
+    document.getElementById("nav_icon").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("myside_nav").style.width = "0";
+    document.getElementById("nav_icon").style.marginLeft= "0";
+}
+</script>
+<!--     /* close and open nave icons sm ends */  -->
+
 
 
 
