@@ -173,14 +173,14 @@ function mobileNav() {
 
 window.onscroll = function() {nav_bar()};
 
-var navbar = getElementsByClassName(".mobile_nav_container");
+var navbar = document.getElementsByClassName("mobile_nav_container");
 var sticky = navbar.offsetTop;
 
 function nav_bar() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add(".nav_fix")
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove(".nav_fix");
   }
 }
 // stick mobile menus
