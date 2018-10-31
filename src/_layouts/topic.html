@@ -126,6 +126,19 @@ display: none;
         }
     }
 
+
+
+.nav_fix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.nav_fix + .content {
+  padding-top: 60px;
+}
+
 </style>
 </head>
   <!-- Simulate a smartphone / tablet -->
@@ -158,25 +171,19 @@ function mobileNav() {
 }
 // mobile site/size hide side bar
 
-         $(function() {
-            var offset3 = $(".mobile_nav_container").offset();
-            var topPadding3 = 15;
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > offset3.top) {
+ <script>
+window.onscroll = function() {nav_bar()};
 
-                    $(".mobile_nav_container").stop().animate({
-                    marginTop: $(window).scrollTop() - offset3.top + topPadding3
-                    });
+var navbar = getElementsByClassName(".mobile_nav_container");
+var sticky = navbar.offsetTop;
 
-                } else {
-                    $(".mobile_nav_container").stop().animate({
-                        marginTop: 0
-                    });
-                };
-            });
-
-        });
-
+function nav_bar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 // stick mobile menus
 
 
