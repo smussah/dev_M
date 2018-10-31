@@ -157,17 +157,17 @@ $(window).resize(function(){
 // stick mobile menus
   $(function() {
     var footer_offset = $(".footer").offset(); //footer offset
-    var sidebar_offset = $(".mobile_nav_container").offset();//sidebaroff set
+    var nav_offset = $(".mobile_nav_container").offset();//sidebaroff set
      var footer_position = footer_offset.top - $(".mobile_nav_container").outerHeight() - 30;//footer position
     var topPadding = 15;
             $(window).scroll(function() {
                 if ($(window).scrollTop() > sidebar_offset.top) {
-                    if(  $(window).scrollTop() < footer_position ) {
+                 //    if(  $(window).scrollTop() < footer_position ) {
                     $(".mobile_nav_container").stop().animate({
-                        marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
+                        marginTop: $(window).scrollTop() - nav_offset.top + topPadding
                     });
-
-                }
+//
+//                 }
                 }
                 else {
                     $(".mobile_nav_container").stop().animate({
