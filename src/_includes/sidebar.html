@@ -4,8 +4,11 @@
 {% if site[page.topic]  %}
  <head>
 
+<!--
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+ -->
+
     <script>
 //     Sidebar scrolling.. sm
     $(function() {
@@ -52,19 +55,19 @@
 
 
      //     Sidebar hovereffects.. sm
-      $( ".sidebar__items li" ).hover(
-  function() {
-    $( this ).append( $( "<i class='fa fa-globe fa-spin fa-1x fa-fw'></i>") );
-
-  }, function() {
-    $( this ).find( "i:last" ).remove();
-  }
-);
-
-$( "li.fade" ).hover(function() {
-  $( this ).fadeOut( 100 );
-  $( this ).fadeIn( 500 );
-});
+   //    $( ".sidebar__items li" ).hover(
+//   function() {
+//     $( this ).append( $( "<i class='fa fa-globe fa-spin fa-1x fa-fw'></i>") );
+//
+//   }, function() {
+//     $( this ).find( "i:last" ).remove();
+//   }
+// );
+//
+// $( "li.fade" ).hover(function() {
+//   $( this ).fadeOut( 100 );
+//   $( this ).fadeIn( 500 );
+// });
 
 // mobile site/size hide side bar
 $(window).resize(function(){
