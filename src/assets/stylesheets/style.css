@@ -2087,12 +2087,15 @@ body.grid:before {
   width: 100%;
   position: absolute; }
 
+
+
+
   /******SM*******/
  .sidebar ul.sidebar__items li{
       margin-top: 10px;
       text-decoration: none;
     border-bottom: 0px solid ;
-    list-style-type: circle;
+  /*   list-style-type: circle; */
 
     font-size: 20px;
 
@@ -2108,7 +2111,7 @@ body.grid:before {
 
  }
  .sidebar__items li:hover {
-  border-left: 4px solid green;
+ /*  border-left: 4px solid green; */
   background-color: #ffffff;
  color: #EEA200;
 
