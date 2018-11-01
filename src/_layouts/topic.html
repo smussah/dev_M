@@ -123,30 +123,28 @@ display: none;
  @media (max-width: 1026px) {
         .mobile_nav_container {
             display: block;
+            .sidebar{
+               display: none;
+            }
         }
     }
 
 
-/*
-.content {
-  padding: 16px;
-}
- */
 
-.sticky {
+.sticky_nav {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.sticky  {
-  padding-top: 60px;
+.sticky_nav {
+  padding-top: 0px;
 }
 
 </style>
 </head>
   <!-- Simulate a smartphone / tablet -->
-<div id="m" class="mobile_nav_container">
+<div id="mobile_sticky" class="mobile_nav_container">
 
 <!-- Top Navigation Menu -->
 <div class="mobile_nav">
@@ -175,20 +173,19 @@ function mobileNav() {
 }
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {mobile_sticky()};
 
 // Get the navbar
-var navbar = document.getElementById("m");
+var navbar = document.getElementById("mobile_sticky");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function mobile_sticky() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky_nav")
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove("sticky_nav");
   }
 }
 
