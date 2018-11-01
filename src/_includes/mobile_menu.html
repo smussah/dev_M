@@ -4,7 +4,7 @@
 <div class="sidebar1">
   <div class="sidebar__inner1">
     <p class="sidebar__header1"> <strong> In this topic.. <strong></p>
-      <ul class="mobile_nav_items">
+      <ul class="sidebar__items">
         {% assign sorted = site[page.topic] | sort: 'order' %}
         {% assign sorted = sorted | where: "published", "true" %}
         {% for doc in sorted %}
