@@ -2122,7 +2122,10 @@ body.grid:before {
  }
  .sidebar ul.sidebar__items li:hover{
    background-color: #ffffff;
-   border-bottom: 10px solid green;
+   border-bottom: 5px solid #ffc500;
   padding: 10px 10px;
   }
+  .sidebar ul.sidebar__items li.current a:hover{
+    background-color: teal;
+    }
 /*# sourceMappingURL=style.css.map */
