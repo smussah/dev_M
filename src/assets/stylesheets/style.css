@@ -2092,7 +2092,7 @@ body.grid:before {
 
   /******SM*******/
  .sidebar ul.sidebar__items li{
-      margin-top: 10px;
+      margin-top: 5px;
       text-decoration: none;
     border-bottom: 0px solid ;
   /*   list-style-type: circle; */
@@ -2112,11 +2112,14 @@ body.grid:before {
  }
  .sidebar__items li:hover {
  /*  border-left: 4px solid green; */
-  background-color: #ffffff;
- color: #EEA200;
+/*   background-color: #ffffff; */
+/*  color: #EEA200; */
 
   padding: 10px 10px;
  }
+.sidebar__items:hover{
 
+  background-color: #ffffff;
+  }
 
 /*# sourceMappingURL=style.css.map */
