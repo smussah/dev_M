@@ -2111,9 +2111,9 @@ body.grid:before {
  }
  .sidebar__items li:hover {
  /*  border-left: 4px solid green; */
-  background-color: #ffffff;
+/*   background-color: #ffffff; */
 /*  color: #EEA200; */
-   border-bottom: 5px solid ;
+   border-bottom: 5px solid green;
   padding: 10px 10px;
       margin-left: -14px;
  }
