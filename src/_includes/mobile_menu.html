@@ -1,10 +1,12 @@
 
     {% if site[page.topic]  %}
 
+<!--
 <div class="sidebar1">
   <div class="sidebar__inner1">
-    <p class="sidebar__header1"> <strong> In this topic.. <strong></p>
+    <p class="sidebar__header1"> <strong> In this topic.. <strong></p> -->
       <ul class="mobile_nav1">
+
         {% assign sorted = site[page.topic] | sort: 'order' %}
         {% assign sorted = sorted | where: "published", "true" %}
         {% for doc in sorted %}
@@ -14,7 +16,7 @@
           {% endif %}
         <li class="{{current}}"><a href="{{doc.url}}">{{doc.title}}</a>
           {% if page.url contains doc.subcollection %}
-            <ul class="sidebar__items1 sub">
+            <ul class="sidebar__items1 sub1">
               {% assign sortedInfo = site[doc.subcollection] | sort: 'order' %}
               {% for doc in sortedInfo %}
               {% assign current = nil %}
@@ -28,6 +30,8 @@
         </li>
         {% endfor %}
       </ul>
-  </div>
+  <!--
 </div>
+</div>
+ -->
 {% endif %}
