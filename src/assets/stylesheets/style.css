@@ -2113,11 +2113,16 @@ body.grid:before {
  /*  border-left: 4px solid green; */
 /*   background-color: #ffffff; */
 /*  color: #EEA200; */
-background-color: #535449;
-        border-left: none
-   border-bottom: 5px solid green;
+
+ /*
+  border-bottom: 10px solid green;
   padding: 10px 10px;
       margin-left: -14px;
+ */
  }
-
+ .sidebar ul.sidebar__items li:hover{
+   background-color: #ffffff;
+   border-bottom: 10px solid green;
+  padding: 10px 10px;
+  }
 /*# sourceMappingURL=style.css.map */
