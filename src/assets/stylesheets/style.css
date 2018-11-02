@@ -2113,8 +2113,9 @@ body.grid:before {
  /*  border-left: 4px solid green; */
   background-color: #ffffff;
 /*  color: #EEA200; */
-
+   border-bottom: 5px solid ;
   padding: 10px 10px;
+      margin-left: -14px;
  }
 
 /*# sourceMappingURL=style.css.map */
