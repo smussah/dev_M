@@ -3,15 +3,14 @@
 
 {% if site[page.topic]  %}
  <head>
-<script>
-//     Sidebar scrolling.. sm
- $(function() {
- $(window).scroll(function() {
-var footer_offset = $(".suggested").offset(); //footer offset
-var sidebar_offset = $("#sid").offset();//sidebaroff set
-var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
-var topPadding = 15;
-var hotlines;
+ <script>
+
+    $(function() {
+    var footer_offset = $(".suggested").offset(); //footer offset
+    var sidebar_offset = $("#sid").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
+    var topPadding = 15;
+    var hotlines;
 var move_sidebar;
 $("hotline").click(function(){
    hotlines = true;
@@ -23,11 +22,6 @@ if( hotline == true ) {
   //unset
 move_sidebar  = $(window).scrollTop() - sidebar_offset.top + topPadding;
 }
- });
- });
-
-
-    $(function() {
             $(window).scroll(function() {
                 if ($(window).scrollTop() > sidebar_offset.top) {
                     if(  $(window).scrollTop() < footer_position ) {
@@ -87,8 +81,8 @@ $(window).resize(function(){
     $(".sidebar").hide();
 	}
 });
-</script>
- </head>
+    </script>
+    </head>
 
 <div id="sid" class="sidebar">
   <div class="sidebar__inner">
