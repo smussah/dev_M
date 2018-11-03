@@ -1,4 +1,7 @@
-
+<div id="color-palate" class="popout card">
+    <div id="color-toggle" class="toggle text-center"><i class="fa fa-cog fa-spin"></i></div>
+    <div class="colors text-center">
+<!--     **** *** -->
 <div id="hotlines" class="sidebar hide">
   <div class="sidebar__inner">
     <p class="sidebar__header"><a href="" id="hotline">IMMEDIATE HELP &amp; SUPPORT</a></p>
@@ -11,35 +14,37 @@
     </ul>
   </div>
 </div>
+</div>
+</div>
 
 <script>
 
- $('#hotline').click(function() {
-   $(function() {
-    var footer_offset1 = $(".suggested").offset(); //footer offset
-    var sidebar_offset1 = $("#sid").offset();//sidebaroff set
-     var footer_position1 = footer_offset1.top - $("#sid").outerHeight() - 30;//footer position
-    var topPadding1 = 15;
-    var t = window.scrollY;
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > sidebar_offset1.top) {
-                    if(  $(window).scrollTop() < footer_position1 ) {
-                    $("#sid").stop().animate({
-                        marginTop: 0
-
-                    });
-
-                }
-                }
-                else {
-                    $("#sid").stop().animate({
-                        marginTop: 0
-                    });
-                };
-            });
-        });
-
-});
+//  $('#hotline').click(function() {
+//    $(function() {
+//     var footer_offset1 = $(".suggested").offset(); //footer offset
+//     var sidebar_offset1 = $("#sid").offset();//sidebaroff set
+//      var footer_position1 = footer_offset1.top - $("#sid").outerHeight() - 30;//footer position
+//     var topPadding1 = 15;
+//     var t = window.scrollY;
+//             $(window).scroll(function() {
+//                 if ($(window).scrollTop() > sidebar_offset1.top) {
+//                     if(  $(window).scrollTop() < footer_position1 ) {
+//                     $("#sid").stop().animate({
+//                         marginTop: 0
+//
+//                     });
+//
+//                 }
+//                 }
+//                 else {
+//                     $("#sid").stop().animate({
+//                         marginTop: 0
+//                     });
+//                 };
+//             });
+//         });
+//
+// });
 
 
 </script>
