@@ -12,19 +12,18 @@
   </div>
 </div>
 
-<!--
 <script>
 
- $('#hep').click(function() {
+ $('#hotline').click(function() {
    $(function() {
-    var footer_offset = $(".suggested").offset(); //footer offset
-    var sidebar_offset = $("#sid").offset();//sidebaroff set
-     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
-    var topPadding = 15;
+    var footer_offset1 = $(".suggested").offset(); //footer offset
+    var sidebar_offset1 = $("#sid").offset();//sidebaroff set
+     var footer_position1 = footer_offset1.top - $("#sid").outerHeight() - 30;//footer position
+    var topPadding1 = 15;
     var t = window.scrollY;
             $(window).scroll(function() {
-                if ($(window).scrollTop() > sidebar_offset.top) {
-                    if(  $(window).scrollTop() < footer_position ) {
+                if ($(window).scrollTop() > sidebar_offset1.top) {
+                    if(  $(window).scrollTop() < footer_position1 ) {
                     $("#sid").stop().animate({
                         marginTop: t
                     });
@@ -43,4 +42,4 @@
 
 
 </script>
- -->
+
