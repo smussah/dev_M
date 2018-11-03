@@ -79,7 +79,7 @@ $(window).resize(function(){
     </script>
     </head>
 
-<div class="sidebar">
+<div id="sid" class="sidebar">
   <div class="sidebar__inner">
     <p class="sidebar__header">in this topic</p>
       <ul class="sidebar__items">
@@ -106,12 +106,7 @@ $(window).resize(function(){
         </li>
         {% endfor %}
       </ul>
-<!--   </div> -->
-<!--   **** -->
-{% if page.hotlines_sidebar == true %}
-  {% include hotlines.html %}
-{% endif %}
-</div>
+  </div>
 </div>
 {% endif %}
 
@@ -136,10 +131,8 @@ $(window).resize(function(){
   {% include repeat_rape.html %}
 {% endif %}
 
-<!--
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
- -->
 
 

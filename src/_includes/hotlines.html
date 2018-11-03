@@ -1,7 +1,7 @@
 
 <div id="hotlines" class="sidebar hide">
   <div class="sidebar__inner">
-    <p class="sidebar__header"><a href="">IMMEDIATE HELP &amp; SUPPORT</a></p>
+    <p class="sidebar__header"><a href="javascript:void(0);" onclick="hot()">IMMEDIATE HELP &amp; SUPPORT</a></p>
     <p class="sidebar__subheader">If you need immediate information you can call one of these 24-hour toll-free hotlines.</p>
     <ul class="sidebar__items">
       {% for item in site.data.hotlines %}
@@ -11,3 +11,21 @@
     </ul>
   </div>
 </div>
+
+<script>
+
+  var h = document.getElementById("hotlines");
+
+// Get the offset position of the navbar
+var sticky = h.offsetTop;
+
+function hot()  {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky_nav")
+  } else {
+    navbar.classList.remove("sticky_nav");
+  }
+}
+
+
+</script>
