@@ -13,20 +13,20 @@
 //     Sidebar scrolling.. sm
     $(function() {
     var footer_offset = $(".suggested").offset(); //footer offset
-    var sidebar_offset = $(".sidebar").offset();//sidebaroff set
-     var footer_position = footer_offset.top - $(".sidebar").outerHeight() - 30;//footer position
+    var sidebar_offset = $("#sid").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
     var topPadding = 15;
             $(window).scroll(function() {
                 if ($(window).scrollTop() > sidebar_offset.top) {
                     if(  $(window).scrollTop() < footer_position ) {
-                    $(".sidebar").stop().animate({
+                    $("#sid").stop().animate({
                         marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
                     });
 
                 }
                 }
                 else {
-                    $(".sidebar").stop().animate({
+                    $("#sid").stop().animate({
                         marginTop: 0
                     });
                 };
@@ -39,11 +39,11 @@
             var topPadding2 = 30;
             $(window).scroll(function() {
                 if ($(window).scrollTop() > offset2.top) {
-
+    if(  $(window).scrollTop() < footer_position ) {
                     $("#hotlines").stop().animate({
                      marginTop: 0
                     });
-
+}
                 } else {
                     $("#hotlines").stop().animate({
                         marginTop: 0
