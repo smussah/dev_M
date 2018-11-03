@@ -11,6 +11,8 @@
 
     <script>
 //     Sidebar scrolling.. sm
+   $(function() {
+            $(window).scroll(function() {
 var footer_offset = $(".suggested").offset(); //footer offset
 var sidebar_offset = $("#sid").offset();//sidebaroff set
 var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
@@ -26,6 +28,7 @@ if( hotline == true ) {
 }else{
   //unset
 move_sidebar  = $(window).scrollTop() - sidebar_offset.top + topPadding;
+}
 }
     $(function() {
             $(window).scroll(function() {
