@@ -123,8 +123,30 @@ $(window).resize(function(){
   {% include repeat_rape.html %}
 {% endif %}
 
+
+
+ <!-- FOR TOGGLE -->
+<div id="color-palate" class="popout card">
+    <div id="color-toggle" class="toggle text-center"><i class="fa fa-cog fa-spin"></i></div>
+    <div class="colors text-center">
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
+    </div>
+</div>
+<!-- # *** end of toggle -->
+
+
+
+<script>
+/*** COLOR CHANGER ***/
+$("#color-toggle").on("click", function () {
+    var e = this.io ^= 1;
+    $("#color-palate").animate({
+        right: e ? 0 : -188
+    }, "slow");
+});
+</script>
+
 
 
