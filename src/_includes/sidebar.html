@@ -5,28 +5,29 @@
  <head>
  <script>
 
+// var hotlines;
+//
+// $("hotline").click(function(){
+// hotlines = true;
+// });
+// if( hotline == true ) {
+// // set windows scrolling offset
+//
+// }else{
+// //unset
+//
+// }
     $(function() {
     var footer_offset = $(".suggested").offset(); //footer offset
     var sidebar_offset = $("#sid").offset();//sidebaroff set
      var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
     var topPadding = 15;
-    var hotlines;
-var move_sidebar;
-$("hotline").click(function(){
-   hotlines = true;
-});
-if( hotline == true ) {
-   // set windows scrolling offset
-   move_sidebar = 0;
-}else{
-  //unset
-move_sidebar  = $(window).scrollTop() - sidebar_offset.top + topPadding;
-}
+
             $(window).scroll(function() {
                 if ($(window).scrollTop() > sidebar_offset.top) {
                     if(  $(window).scrollTop() < footer_position ) {
                     $("#sid").stop().animate({
-                        marginTop: move_sidebar
+                        marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
                     });
 
                 }
@@ -38,7 +39,7 @@ move_sidebar  = $(window).scrollTop() - sidebar_offset.top + topPadding;
                 };
             });
         });
-
+// ************* move******
 
          $(function() {
             var offset2 = $("#hotlines").offset();
