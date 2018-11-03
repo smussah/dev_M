@@ -7,7 +7,7 @@
 </head>
 <div id="hotlines" class="sidebar hide">
   <div class="sidebar__inner">
-    <p class="sidebar__header"><a href="">IMMEDIATE HELP &amp; SUPPORT</a></p>
+    <p class="sidebar__header"><a href="" id="hep">IMMEDIATE HELP &amp; SUPPORT</a></p>
     <p class="sidebar__subheader">If you need immediate information you can call one of these 24-hour toll-free hotlines.</p>
     <ul class="sidebar__items">
       {% for item in site.data.hotlines %}
@@ -20,8 +20,29 @@
 
 <script>
 
- $('#hotlines').click(function() {
-    $(".sidebar").addClass('tt');
+ $('#hep').click(function() {
+   $(function() {
+    var footer_offset = $(".suggested").offset(); //footer offset
+    var sidebar_offset = $("#sid").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
+    var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > sidebar_offset.top) {
+                    if(  $(window).scrollTop() < footer_position ) {
+                    $("#sid").stop().animate({
+                        marginTop: 0
+                    });
+
+                }
+                }
+                else {
+                    $("#sid").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+
 });
 
 
