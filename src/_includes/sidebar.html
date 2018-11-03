@@ -3,16 +3,10 @@
 
 {% if site[page.topic]  %}
  <head>
-
-<!--
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
- -->
-
-    <script>
+<script>
 //     Sidebar scrolling.. sm
-   $(function() {
-            $(window).scroll(function() {
+ $(function() {
+ $(window).scroll(function() {
 var footer_offset = $(".suggested").offset(); //footer offset
 var sidebar_offset = $("#sid").offset();//sidebaroff set
 var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
@@ -30,7 +24,7 @@ if( hotline == true ) {
 move_sidebar  = $(window).scrollTop() - sidebar_offset.top + topPadding;
 }
  });
-
+ });
 
 
     $(function() {
@@ -93,8 +87,8 @@ $(window).resize(function(){
     $(".sidebar").hide();
 	}
 });
-    </script>
-    </head>
+</script>
+ </head>
 
 <div id="sid" class="sidebar">
   <div class="sidebar__inner">
