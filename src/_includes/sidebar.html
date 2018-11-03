@@ -107,6 +107,10 @@ $(window).resize(function(){
         {% endfor %}
       </ul>
   </div>
+<!--   **** -->
+{% if page.hotlines_sidebar == true %}
+  {% include hotlines.html %}
+{% endif %}
 </div>
 {% endif %}
 
@@ -131,8 +135,10 @@ $(window).resize(function(){
   {% include repeat_rape.html %}
 {% endif %}
 
+<!--
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
+ -->
 
 
