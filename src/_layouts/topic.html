@@ -156,47 +156,11 @@ display: none;
     }
 
 
-.popout{
-position:fixed;
-width:188px;
-height:191px;
-background-color:#ffffff;
-color:#212121;
-top:200px;
-right:-188px;
-transition:500ms transform ease-in-out;z-index:5;}
-
-.toggle{display:table;
-position:absolute;
-top:80px;left:-40px;
-width:40px;
-font-size:20px;
-border:2px solid gainsboro;
-height:40px;
-background-color:white;
-color:#222527;
-cursor:pointer;}
-
-.toggle i{display:table-cell;
-vertical-align:middle;
-}
-.colors{padding:15px;}
-.colors p{margin:0;
-		alignment:center;
-		}
-.colors ul li{height:30px;
-width:30px;
-margin:0 3px;
-display:inline-block;
-cursor:pointer;border-radius:50%;
-transition:.4s;}
-.colors ul li:hover{transform:scale(1.2);}
-
 
 /* ***Style sw *** begen */
 /* Styleswitcher - box */
 
-#style-switcher {
+#help_line{
 	position: fixed;
 	top: 0;
 	right: -175px;
@@ -215,7 +179,7 @@ transition:.4s;}
 
 /* Styleswitcher - trigger */
 
-#style-switcher .ss-toggle {
+#help_line.help_toggle {
 	position: absolute;
 	top: 0;
 	left: -36px;
@@ -236,24 +200,24 @@ transition:.4s;}
 	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
 }
 
-#style-switcher .ss-toggle:hover,
-#style-switcher .ss-toggle:focus {
+#help_line.help_toggle:hover,
+#help_line.help_toggle:focus {
 }
 
-#style-switcher .ss-toggle i {
+#help_line.help_toggle i {
 	margin-top: 26px;
 	font-size: 12px;
 }
 
 /* Styleswitcher - options */
 
-#style-switcher ul {
+#help_lineul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-#style-switcher .ss-label {
+#help_line.ss-label {
 	display: block;
 	font-weight: 500;
 	font-size: 10px;

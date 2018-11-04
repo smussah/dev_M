@@ -1,10 +1,4 @@
 
-
-<!--
-<div id="color-palate" class="popout card">
-    <div id="color-toggle" class="toggle text-center"><i class="fa fa-cog"></i></div>
-    <div class="colors text-center">
- -->
 <!--     **** *** -->
 <div id="hotlines" class="sidebar hide">
   <div class="sidebar__inner">
@@ -18,20 +12,8 @@
     </ul>
   </div>
 </div>
-<!--
-</div>
-</div>
- -->
 
 <script>
-// jQuery(function ($) {
-//     $('#color-toggle').click(function () {
-//      var e = this.io ^= 1;
-//     $("#color-palate").animate({
-//         right: e ? 0 : -188
-//     }, "slow");
-//     });
-// });
 //  $('#hotline').click(function() {
 //    $(function() {
 //     var footer_offset1 = $(".suggested").offset(); //footer offset
@@ -63,58 +45,13 @@
 </script>
 
 
-/*
-.popout{
-position:fixed;
-width:188px;
-height:191px;
-background-color:#ffffff;
-color:#212121;
-top:200px;
-right:-188px;
-transition:500ms transform ease-in-out;z-index:5;}
-
-.toggle{display:table;
-position:absolute;
-top:80px;left:-40px;
-width:40px;
-font-size:20px;
-border:2px solid gainsboro;
-height:40px;
-background-color:white;
-color:#222527;
-cursor:pointer;}
-
-.toggle i{display:table-cell;
-vertical-align:middle;
-}
-.colors{padding:15px;}
-.colors p{margin:0;
-		alignment:center;
-		}
-.colors ul li{height:30px;
-width:30px;
-margin:0 3px;
-display:inline-block;
-cursor:pointer;border-radius:50%;
-transition:.4s;}
-.colors ul li:hover{transform:scale(1.2);}
- */
 
 
 
 
- <!-- FOR TOGGLE -->
-<div id="color-palate" class="popout card">
-    <div id="color-toggle" class="toggle text-center"><i class="fa fa-cog "></i></div>
-    <div class="colors text-center">
-akjsdfkjaskdjfkalsjf'sfaskjflskdjf'sdf;skdjf
-    </div>
-</div>
-<!-- # *** end of toggle -->
 
-<div id="style-switcher">
-<span class="ss-toggle bg-primary"><i class="fa fa-gear fa-spin"></i></span>
+<div id="help_line">
+<span class="help_toggle bg-primary"><i class="fa fa-gear fa-spin"></i></span>
 <span class="ss-label">Change page colors:</span>
 somksdjfksjd f
 skdjfksjdfj
@@ -124,32 +61,16 @@ sdfksdjfkj
 aksdfj;lsdkjf'skdfj
 </div>
 <script>
-// ** COLOR CHANGER ***/
-// $("#color-toggle").on("click", function () {
-//     var e = this.io ^= 1;
-//     $("#color-palate").animate({
-//         right: e ? 0 : -188
-//     }, "slow");
-// });
 
-$(function () {
-    $("#color-toggle").click(function () {
-     var e = this.io ^= 1;
-    $("#color-palate").animate({
-        right: e ? 0 : -188
-    }, "slow");
-    });
-});
-
-$('#style-switcher .ss-toggle').click(function(){
-			var div = $('#style-switcher');
+$('#help_line .help_toggle').click(function(){
+			var div = $('#help_line');
 			if (div.css('right') === '-175px') {
-				$('#style-switcher').animate({
+				$('#help_line').animate({
 					right: '0'
 				});
 				$(this).toggleClass('active');
 			} else {
-				$('#style-switcher').animate({
+				$('#help_line').animate({
 					right: '-175px'
 				});
 				$(this).toggleClass('active');
