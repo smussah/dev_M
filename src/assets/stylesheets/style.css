@@ -2121,15 +2121,17 @@ body.grid:before {
  */
  }
  .sidebar ul.sidebar__items li:hover{
-   background-color: #ffffff;
-   border-bottom: 4px solid #ffc500;
+   background-color: #689700;
+   border-bottom: 2px solid #ffc500;
   padding: 10px 10px;
   }
+
   .sidebar ul.sidebar__items ul.sub li:hover {
     color: #82816f!important;
     font-weight: 400;
       background-color: teal;
    border-bottom: 0px solid #ffc500;
+    padding: 0px 0px;
 }
 /*
   .sidebar ul.sidebar__items li.current a:hover{
