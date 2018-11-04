@@ -2125,10 +2125,10 @@ body.grid:before {
    border-bottom: 4px solid #ffc500;
   padding: 10px 10px;
   }
-  .sidebar ul.sidebar__items ul.sub li a:hover {
+  .sidebar ul.sidebar__items ul.sub li:hover {
     color: #82816f!important;
     font-weight: 400;
-      background-color: #ffffff;
+      background-color: teal;
    border-bottom: 0px solid #ffc500;
 }
 /*
