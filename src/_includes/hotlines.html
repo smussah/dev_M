@@ -2,7 +2,7 @@
     <div id="color-toggle" class="toggle text-center"><i class="fa fa-cog"></i></div>
     <div class="colors text-center">
 <!--     **** *** -->
-<div id="hotlines" class="sidebar hide">
+<div id="hotlines1" class="sidebar1 hide">
   <div class="sidebar__inner">
     <p class="sidebar__header"><a href="" id="hotline">IMMEDIATE HELP &amp; SUPPORT</a></p>
     <p class="sidebar__subheader">If you need immediate information you can call one of these 24-hour toll-free hotlines.</p>
@@ -18,11 +18,13 @@
 </div>
 
 <script>
-$("#color-toggle").on("click", function () {
-    var e = this.io ^= 1;
+jQuery(function ($) {
+    $('#color-toggle').click(function () {
+     var e = this.io ^= 1;
     $("#color-palate").animate({
         right: e ? 0 : -188
     }, "slow");
+    });
 });
 //  $('#hotline').click(function() {
 //    $(function() {
