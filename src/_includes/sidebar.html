@@ -125,18 +125,11 @@ $(window).resize(function(){
 
 
 
-
-
-
-<div id="help_line">
-<span class="help_toggle bg-primary"><i class="fa fa-gear fa-spin"></i></span>
-<!-- <span class="ss-label">Change page colors:</span> -->
-
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
 
-</div>
+
 <script>
 
 $('#help_line .help_toggle').click(function(){
