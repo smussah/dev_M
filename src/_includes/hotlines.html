@@ -113,8 +113,16 @@ akjsdfkjaskdjfkalsjf'sfaskjflskdjf'sdf;skdjf
 </div>
 <!-- # *** end of toggle -->
 
-
-
+<div id="style-switcher">
+<span class="ss-toggle bg-primary"><i class="fa fa-gear fa-spin"></i></span>
+<span class="ss-label">Change page colors:</span>
+somksdjfksjd f
+skdjfksjdfj
+skdfjlksdjf
+skdfaskldfj
+sdfksdjfkj
+aksdfj;lsdkjf'skdfj
+</div>
 <script>
 // ** COLOR CHANGER ***/
 // $("#color-toggle").on("click", function () {
@@ -132,6 +140,22 @@ $(function () {
     }, "slow");
     });
 });
+
+$('#style-switcher .ss-toggle').click(function(){
+			var div = $('#style-switcher');
+			if (div.css('right') === '-175px') {
+				$('#style-switcher').animate({
+					right: '0'
+				});
+				$(this).toggleClass('active');
+			} else {
+				$('#style-switcher').animate({
+					right: '-175px'
+				});
+				$(this).toggleClass('active');
+			}
+			return false;
+		});
 
 </script>
 
