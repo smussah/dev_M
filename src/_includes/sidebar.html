@@ -131,11 +131,36 @@ $(window).resize(function(){
 
 
 
-
-
+<div id="help_line">
+<span class="help_toggle bg-primary"><i class="fa fa-gear fa-spin"></i></span>
+<span class="ss-label">Change page colors:</span>
+somksdjfksjd f
+skdjfksjdfj
+skdfjlksdjf
+skdfaskldfj
+sdfksdjfkj
+aksdfj;lsdkjf'skdfj
+</div>
 <script>
 
+$('#help_line .help_toggle').click(function(){
+			var div = $('#help_line');
+			if (div.css('right') === '-175px') {
+				$('#help_line').animate({
+					right: '0'
+				});
+				$(this).toggleClass('active');
+			} else {
+				$('#help_line').animate({
+					right: '-175px'
+				});
+				$(this).toggleClass('active');
+			}
+			return false;
+		});
+
 </script>
+
 
 
 
