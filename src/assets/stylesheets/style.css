@@ -2121,7 +2121,7 @@ body.grid:before {
  */
  }
  .sidebar ul.sidebar__items li:hover{
-   background-color: #689700;
+   background-color: #ffffff;
    border-bottom: 2px solid #ffc500;
   padding: 10px 10px;
   }
@@ -2129,7 +2129,7 @@ body.grid:before {
   .sidebar ul.sidebar__items ul.sub li:hover {
     color: #82816f!important;
     font-weight: 400;
-      background-color: teal;
+      background-color: #ffffff00;
    border-bottom: 0px solid #ffc500;
     padding: 0px 0px;
 }
