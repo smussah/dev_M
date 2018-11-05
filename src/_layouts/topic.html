@@ -262,7 +262,7 @@ display: none;
 
   </div>
   <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-    <i class="fa fa-chevron-circle-down icon-3x" aria-hidden="true"></i>
+    <i id="f-icon" class="fa fa-chevron-down icon-3x" aria-hidden="true"></i>
   </a>
 </div>
 
@@ -278,8 +278,10 @@ function mobileNav() {
   } else {
 
     nav.style.display = "block";
-
   }
+//   **** toggle icons ****
+ var tog = document.getElementById("f-icon");
+ tog.classList.toggle("fa-chevron-circle-up");
 }
 
 // When the user scrolls the page, execute myFunction

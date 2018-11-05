@@ -133,6 +133,8 @@ $(window).resize(function(){
 <script>
 
 $('#help_line .help_toggle').click(function(){
+    $("#f").removeClass("fa-question-circle-o");
+         $("#f").toggleClass("fa-times");
 			var div = $('#help_line');
 			if (div.css('right') === '-265px') {
 				$('#help_line').animate({
@@ -140,17 +142,18 @@ $('#help_line .help_toggle').click(function(){
 				});
 				$(this).toggleClass('active');
 
+
 			} else {
 				$('#help_line').animate({
 					right: '-265px'
+
 				});
+			  $("#f").addClass("fa-question-circle-o");
 				$(this).toggleClass('active');
+
 			}
 			return false;
 		});
 
+
 </script>
-
-
-
-

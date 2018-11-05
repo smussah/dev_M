@@ -818,7 +818,12 @@ h4 {
 
 .sidebar .sidebar__inner {
   background-color: #f4f4f2;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+
+     width: 330px;
+}
+
+
   @media screen and (min-width: 6.25em) {
     .sidebar .sidebar__inner {
       padding: 1rem; } }
@@ -2133,6 +2138,13 @@ body.grid:before {
    border-bottom: 0px solid #ffc500;
     padding: 5px 5px;
 }
+
+div#sid.sidebar .sidebar__inner{
+background-color: #f4f4f2;
+margin-bottom: 2rem;
+width: 329px;
+}
+
 /*
   .sidebar ul.sidebar__items li.current a:hover{
     background-color: teal;
