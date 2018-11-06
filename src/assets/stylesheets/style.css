@@ -2155,7 +2155,9 @@ width: 329px;
   padding-top: 0px;
 
 }
-
+.active-t{
+    color: #689700!important;
+    font-weight: 700;}
 /*
   .sidebar ul.sidebar__items li.current a:hover{
     background-color: teal;
