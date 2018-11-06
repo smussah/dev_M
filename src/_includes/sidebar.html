@@ -7,10 +7,10 @@ $(window).resize(function(){
 	if ($(window).width() <1366){
 
 
-    $( "#sid" ).removeClass(".sidebar" );
+    $(".sidebar" ).hide();
 	}
 	else {
-$( "#sid" ).addClass( ".sidebar" );
+  $(".sidebar" ).show();
 	}
 });
 
