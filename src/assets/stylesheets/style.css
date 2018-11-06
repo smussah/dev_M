@@ -2145,6 +2145,17 @@ margin-bottom: 2rem;
 width: 329px;
 }
 
+.sticky_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky_nav {
+  padding-top: 0px;
+
+}
+
 /*
   .sidebar ul.sidebar__items li.current a:hover{
     background-color: teal;
