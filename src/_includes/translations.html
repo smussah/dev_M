@@ -1,4 +1,4 @@
-<div id="sid" class="sidebar">
+<div id="s" class="sidebar">
   <div class="sidebar__inner">
     <p class="sidebar__header">TRANSLATIONS</p>
       <ul class="sidebar__items">
@@ -8,3 +8,16 @@
       </ul>
   </div>
 </div>
+<script>
+
+$(function(){
+    var current = location.pathname;
+    $('#s li a').each(function(){
+        var $this = $(this);
+
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
+        }
+    })
+})
+</script>
