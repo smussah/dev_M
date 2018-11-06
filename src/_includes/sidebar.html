@@ -143,13 +143,26 @@ $('#help_line .help_toggle').click(function(){
 			if (div.css('right') === '-265px') {
 				$('#help_line').animate({
 					right: '0'
+
 				});
 				$(this).toggleClass('active');
+				$('#help_line .help_toggle').animate({
+				top: "-41px",
+				left: "0px"
+
+				});
+
+
 
 
 			} else {
 				$('#help_line').animate({
 					right: '-265px'
+
+				});
+				$('#help_line .help_toggle').animate({
+				top: "0",
+				left: "-112px"
 
 				});
 			  $("#f").addClass("fa-question-circle-o");
