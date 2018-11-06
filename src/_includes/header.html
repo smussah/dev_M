@@ -1,4 +1,4 @@
-<header class="navigation" role="banner">
+<header id="main-menu" class="navigation" role="banner">
   <div class="navigation-wrapper">
     <div class="brand">
       <a href="/" class="logo"><img src="/assets/images/logo.png" alt=""></a>
@@ -24,3 +24,23 @@
 
   </div>
 </header>
+
+<script>
+// When the user scrolls the page, execute obileNav()
+window.onscroll = function() {menu_sticky()};
+
+// Get the navbar
+var navbar = document.getElementById("main-menu");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+function menu_sticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky_nav")
+  } else {
+    navbar.classList.remove("sticky_nav");
+  }
+}
+
+</script>
