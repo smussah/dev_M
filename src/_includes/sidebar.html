@@ -37,39 +37,23 @@ location.reload();
         });
 // ************* move******
 
-         $(function() {
-            var offset2 = $("#hotlines").offset();
-            var topPadding2 = 30;
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > offset2.top) {
-
-                    $("#hotlines").stop().animate({
-                     marginTop: 0
-                    });
-                } else {
-                    $("#hotlines").stop().animate({
-                        marginTop: 0
-                    });
-                };
-            });
-
-        });
-
-
-     //     Sidebar hovereffects.. sm
-   //    $( ".sidebar__items li" ).hover(
-//   function() {
-//     $( this ).append( $( "<i class='fa fa-globe fa-spin fa-1x fa-fw'></i>") );
+    //      $(function() {
+//             var offset2 = $("#hotlines").offset();
+//             var topPadding2 = 30;
+//             $(window).scroll(function() {
+//                 if ($(window).scrollTop() > offset2.top) {
 //
-//   }, function() {
-//     $( this ).find( "i:last" ).remove();
-//   }
-// );
+//                     $("#hotlines").stop().animate({
+//                      marginTop: 0
+//                     });
+//                 } else {
+//                     $("#hotlines").stop().animate({
+//                         marginTop: 0
+//                     });
+//                 };
+//             });
 //
-// $( "li.fade" ).hover(function() {
-//   $( this ).fadeOut( 100 );
-//   $( this ).fadeIn( 500 );
-// });
+//         });
 
 
     </script>
@@ -143,19 +127,15 @@ $('#help_line .help_toggle').click(function(){
 			if (div.css('right') === '-265px') {
 				$('#help_line').animate({
 					right: '0'
-
 				});
 				$(this).toggleClass('active');
 				$('#help_line .help_toggle').animate({
 				top: "-41px",
 				left: "0px"
-
 				});
 
-
-
-
-			} else {
+			}
+			else {
 				$('#help_line').animate({
 					right: '-265px'
 
@@ -163,11 +143,9 @@ $('#help_line .help_toggle').click(function(){
 				$('#help_line .help_toggle').animate({
 				top: "0",
 				left: "-112px"
-
 				});
 			  $("#f").addClass("fa-question-circle-o");
 				$(this).toggleClass('active');
-
 			}
 			return false;
 		});
