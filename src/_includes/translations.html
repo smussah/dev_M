@@ -1,3 +1,8 @@
+<style>
+.active-t{
+    color: #689700!important;
+    font-weight: 700;}
+</style>
 <div id="s" class="sidebar">
   <div class="sidebar__inner">
     <p class="sidebar__header">TRANSLATIONS</p>
@@ -17,7 +22,7 @@ $(function(){
         var $this = $(this);
 
         if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('current');
+            $this.addClass('active-t');
         }
     })
 })
