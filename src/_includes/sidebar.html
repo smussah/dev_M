@@ -65,10 +65,11 @@
 $(window).resize(function(){
 	if ($(window).width() <1366){
 
-    $(".sidebar").hide();
+
+    $( "#sid" ).removeClass(".sidebar" );
 	}
 	else {
-	   $(".sidebar").show();
+$( "#sid" ).addClass( ".sidebar" );
 	}
 });
     </script>
