@@ -2,6 +2,17 @@
 {% if site[page.topic]  %}
  <head>
  <script>
+ // mobile site/size hide side bar
+$(window).resize(function(){
+	if ($(window).width() <1366){
+
+
+    $( "#sid" ).removeClass(".sidebar" );
+	}
+	else {
+$( "#sid" ).addClass( ".sidebar" );
+	}
+});
 
     $(function() {
     var footer_offset = $(".suggested").offset(); //footer offset
@@ -61,17 +72,7 @@
 //   $( this ).fadeIn( 500 );
 // });
 
-// mobile site/size hide side bar
-$(window).resize(function(){
-	if ($(window).width() <1366){
 
-
-    $( "#sid" ).removeClass(".sidebar" );
-	}
-	else {
-$( "#sid" ).addClass( ".sidebar" );
-	}
-});
     </script>
     </head>
 
