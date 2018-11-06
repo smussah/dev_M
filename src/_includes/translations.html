@@ -3,7 +3,7 @@
     color: #689700!important;
     font-weight: 700;}
 </style>
-<div id="s" class="sidebar">
+<div id="" class="sidebar">
   <div class="sidebar__inner">
     <p class="sidebar__header">TRANSLATIONS</p>
       <ul class="sidebar__items">
@@ -18,7 +18,7 @@
 //add active class
 $(function(){
     var current = location.pathname;
-    $('#s ul.sidebar__items li a').each(function(){
+    $(' ul.sidebar__items li a').each(function(){
         var $this = $(this);
 
         if($this.attr('href').indexOf(current) !== -1){
