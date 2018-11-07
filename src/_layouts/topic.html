@@ -191,7 +191,6 @@ display: none;
     color: #FFC107;
     text-align: center;
     cursor: pointer;
-    /* background-color: #669800; */
     font-size: 17px;
     cursor: pointer;
     background-color: #689700;
@@ -206,7 +205,6 @@ display: none;
 }
 
 #help_line .help_toggle i {
-    /* margin-top: 26px; */
     font-size: 31px;
     margin-left: -17px;
 }
@@ -319,11 +317,6 @@ function mobile_sticky() {
           {% capture url %}http://{{site.url}}{{page.url}}{% endcapture %}
           {% if page.custom_title %}{% capture title %}{{page.custom_title}}{% endcapture %}{% else %}{% capture title %}{{page.title}}{% endcapture %}{% endif %}
           <a target="_blank" href="https://twitter.com/share?url={{url}}&text={{title | escape}}"><i class="fa fa-twitter" aria-hidden="true"></i> tweet</a>
-
-
-
-
-
         </div>
       </div>
       <div class="hide-s hide-m show-l">
