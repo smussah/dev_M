@@ -1,5 +1,5 @@
 
-<div id="sid" class="sidebar">
+<div id="sid_2" class="sidebar">
   <div class="sidebar__inner">
     <p class="sidebar__header">TRANSLATIONS</p>
       <ul class="sidebar__items">
@@ -28,21 +28,21 @@ $(function(){
 <script>
     $(function() {
     var footer_offset = $(".suggested").offset(); //footer offset
-    var sidebar_offset = $("#sid").offset();//sidebaroff set
-     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
+    var sidebar_offset = $("#sid_2").offset();//sidebaroff set
+     var footer_position = footer_offset.top - $("#sid_2").outerHeight() - 30;//footer position
     var topPadding = 15;
 
             $(window).scroll(function() {
                 if ($(window).scrollTop() > sidebar_offset.top) {
                     if(  $(window).scrollTop() < footer_position ) {
-                    $("#sid").stop().animate({
+                    $("#sid_2").stop().animate({
                         marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
                     });
 
                 }
                 }
                 else {
-                    $("#sid").stop().animate({
+                    $("#sid_2").stop().animate({
                         marginTop: 0
                     });
                 };
