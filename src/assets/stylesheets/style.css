@@ -2156,6 +2156,13 @@ width: 329px;
 
 }
 
+
+****** sub ***
+.sidebar ul.sidebar__items ul.sub li a {
+    color: #82816f!important;
+    font-weight: 400;
+    font-size: 15px;
+}
 /*
   .sidebar ul.sidebar__items li.current a:hover{
     background-color: teal;
