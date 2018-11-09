@@ -13,9 +13,7 @@ test_ing: true
 og_image_path: /assets/images/header-meditation-small.jpg
 ---
 
-<div id="sid" class="sidebar">
-  <div class="sidebar__inner">
-  
+
 
 on this page
 {: .onpage__header}
@@ -27,8 +25,7 @@ on this page
 * [Caution: Mindfulness Requires Readiness](#caution-mindfulness-requires-readiness)
 * [Resources for Learning to Be More Mindful](#resources-for-learning-to-be-more-mindful)
 {: .onpage}
-</div>
-</div>
+
 
 ## Introduction
 
