@@ -19,7 +19,7 @@
           {% endif %}
         <li class="{{current}}"><a href="{{doc.url}}">{{doc.title}}</a>
           {% if page.url contains doc.subcollection %}
-            <ul class="sidebar__items1 sub1">
+            <ul class="sidebar__items sub">
               {% assign sortedInfo = site[doc.subcollection] | sort: 'order' %}
               {% for doc in sortedInfo %}
               {% assign current = nil %}
