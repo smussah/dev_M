@@ -13,6 +13,7 @@ og_image_path: /assets/images/header-brain-small.jpg
 ---
 
 
+<!-- 
 on this page
 {: .onpage__header}
 
@@ -27,6 +28,7 @@ on this page
 * [Exercises and Handouts](#exercises-and-handouts)
 * [Additional Notes](#additional-notes)
 {: .onpage}
+ -->
 
 ## Introduction
 
