@@ -5,7 +5,11 @@
 <div class="sidebar1">
   <div class="sidebar__inner1">
     <p class="sidebar__header1"> <strong> In this topic.. <strong></p> -->
-      <ul class="mobile_nav1">
+  <!--     <ul class="mobile_nav1"> -->
+  <div id="sid" class="sidebar">
+  <div class="sidebar__inner">
+    <p class="sidebar__header">in this topic</p>
+      <ul class="sidebar__items">
 
         {% assign sorted = site[page.topic] | sort: 'order' %}
         {% assign sorted = sorted | where: "published", "true" %}
@@ -30,8 +34,7 @@
         </li>
         {% endfor %}
       </ul>
-  <!--
+  </div>
 </div>
-</div>
- -->
+
 {% endif %}
