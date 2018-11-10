@@ -2159,7 +2159,25 @@ width: 329px;
 
 }
 
+#sc_button {
+    display: none;
+    position: fixed;
+    bottom: 21px;
+    right: 30px;
+    z-index: 99;
+    font-size: 0px;
+    border: none;
+    outline: none;
+    background-color: #ffd275;
+    color: white;
+    cursor: pointer;
+    padding: 9px;
+    border-radius: 4px;
+}
 
+#sc_button:hover {
+  background-color: #689700;
+}
 
 /*
   .sidebar ul.sidebar__items li.current a:hover{
