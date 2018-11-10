@@ -67,9 +67,10 @@ layout: default
 
   </section>
 
+<!--//got to top button-->
+<button onclick="sc_topFunction()" id="sc_button" title="Go to top"><i class="material-icons">arrow_upward</i></button>
 
-
-  <section class="article">
+  <section id="gotop" class="article">
    <!--   start of mobile nave sm  -->
 
 <!--   ****** -->
@@ -304,6 +305,30 @@ function mobile_sticky() {
   }
 }
 
+
+
+//scrolling to top function --- SM
+    var go_to = document.getElementById("gotop");
+    //   var testDiv = document.getElementsByClassName(".m");
+         var off_set = go_to.offsetTop;
+  //   document.getElementById("test").innerHTML = s;
+
+
+window.onscroll = function() { goTosc_topFunction() };
+
+function goTosc_topFunction(){
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        document.getElementById("sc_button").style.display = "block";
+    } else {
+        document.getElementById("sc_button").style.display = "none";
+    }
+}
+
+
+function sc_topFunction(){
+    document.body.scrollTop = off_set;
+    document.documentElement.scrollTop = off_set;
+}
 </script>
 
 <!-- end of mobile nav sm -->
