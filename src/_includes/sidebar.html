@@ -140,5 +140,70 @@ $('#help_line .help_toggle').click(function(){
 			return false;
 		});
 
+// *** mobile site ***
+
+(function($) {
+	function help_line() {
+
+		  $("#help_line .help_toggle").click(function(e) {
+    e.stopPropagation();
+		 if  (($(this).hasClass('help_toggle')&&$('#help_line'))&&(window.matchMedia('(max-width: 1026px)').matches)) {
+   $("#f").removeClass("fa-volume-control-phone");
+         $("#f").addClass("fa-times");
+			var div = $('#help_line');
+			if (div.css('right') === '-265px') {
+				$('#help_line').animate({
+					right: '0'
+				});
+				$(this).toggleClass('active');
+				$('#help_line .help_toggle').animate({
+				top: "-48px",
+				left: "-2px"
+
+				});
+				$('#help_line .help_toggle').css({
+    '-webkit-transform': 'rotate(0deg)',
+    '-moz-transform':    'rotate(0deg)',
+    '-o-transform':      'rotate(0deg)',
+    '-ms-transform':     'rotate(0deg)'
+     //   'transform-origin': '0 0'
+       });
+
+			} else {
+				$('#help_line').animate({
+					right: '-265px'
+
+				});
+				$('#help_line .help_toggle').animate({
+				top: "0",
+				left: "-94px"
+
+				});
+			$('#help_line .help_toggle').css({
+    '-webkit-transform': 'rotate(-90deg)',
+    '-moz-transform':    'rotate(-90deg)',
+    '-o-transform':      'rotate(-90deg)',
+    '-ms-transform':     'rotate(-90deg)'
+});
+
+			  $("#f").addClass("fa-volume-control-phone");
+				$(this).toggleClass('active');
+
+			}
+
+
+		}
+
+				// return false;
+
+	});
+	};
+	/* Call the function */
+  help_line();
+  /* Attach the function to the resize event listener */
+	window.addEventListener('resize', help_line, false);
+
+})(jQuery);
+
 
 </script>
