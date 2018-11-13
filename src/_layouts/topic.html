@@ -336,7 +336,7 @@ function mobileNav() {
 
 
 // When the user scrolls the page, execute obileNav()
-window.onscroll = function() {mobile_sticky()};
+window.onscroll = function() {mobile_sticky(); goTosc_topFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("mobile_sticky");
@@ -360,8 +360,7 @@ function mobile_sticky() {
          var off_set = go_to.offsetTop;
   //   document.getElementById("test").innerHTML = s;
 
-
-window.onscroll = function() { goTosc_topFunction() };
+// window.onscroll = function() { goTosc_topFunction() };
 
 function goTosc_topFunction(){
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
