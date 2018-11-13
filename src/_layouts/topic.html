@@ -81,6 +81,7 @@ layout: default
 <style>
 
 .sticky_nav {
+    margin-top: -48px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -336,7 +337,8 @@ function mobileNav() {
 
 
 // When the user scrolls the page, execute obileNav()
-window.onscroll = function() {mobile_sticky(); goTosc_topFunction()};
+window.onscroll = function() {mobile_sticky();
+goTosc_topFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("mobile_sticky");
