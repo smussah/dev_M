@@ -242,7 +242,7 @@ display: none;
 #help_line .help_toggle:hover,
 #help_line .help_toggle:focus {
   color: #FFC107;
-    margin-bottom: 2px solid #FFC107;
+   border-bottom: 3px solid #FFC107;
 }
 
 
@@ -364,7 +364,7 @@ function mobile_sticky() {
 window.onscroll = function() { goTosc_topFunction() };
 
 function goTosc_topFunction(){
-    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById("sc_button").style.display = "block";
     } else {
         document.getElementById("sc_button").style.display = "none";
