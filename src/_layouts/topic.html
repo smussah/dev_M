@@ -51,7 +51,7 @@ layout: default
     </div>
   </section>
   {% endif %}
-
+ <div id="n_m"></div>   <!-- *** function gotop page mobile *** -->
   <section class="hero">
     <div class="container">
       <div class="inner-wrapper">
@@ -64,7 +64,7 @@ layout: default
         {% endif %}
       </div>
     </div>
- <div id="gotop"></div>
+ <div id="gotop"></div>      <!-- *** function gotop page desktop *** -->
   </section>
 
 <!--//got to top button-->
@@ -367,8 +367,19 @@ function mobile_sticky() {
 
 
 //scrolling to top function --- SM
-    var go_to = document.getElementById("gotop");
-    //   var testDiv = document.getElementsByClassName(".m");
+  var go_to = 0; //
+function goTop(move_up) {
+    if (move_up.matches) {
+        // document.body.style.backgroundColor = "yellow";
+      go_to = document.getElementById("n_m");
+    } else {
+    go_to = document.getElementById("gotop");
+    }
+}
+
+var move_up = window.matchMedia("(max-width: 1026px)")
+goTop(move_up)
+move_up.addListener(goTop)
          var off_set = go_to.offsetTop;
   //   document.getElementById("test").innerHTML = s;
 
