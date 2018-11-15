@@ -2165,7 +2165,7 @@ width: 329px;
     position: fixed;
     bottom: 21px;
    right: auto;
-    left: 23px;
+/*     left: 23px; */
     z-index: 22100;
     font-size: 0px;
     border: none;
