@@ -1,21 +1,65 @@
 
-<!--     **** *** -->
 <div id="help_line">
 <span class="help_toggle"><i id="f" class="fa fa-volume-control-phone"></i>Get Help</span>
-<div id="hotlines" class="sidebar hide2">
-  <div class="sidebar__inner">
-    <p class="sidebar__header"><a href="" id="hotline">IMMEDIATE HELP &amp; SUPPORT</a></p>
-    <p class="sidebar__subheader">If you need immediate information you can call one of these 24-hour toll-free hotlines.</p>
-    <ul class="sidebar__items">
+<div id="hots">
+    <p class="header_2"><a href="" id="hotline">IMMEDIATE HELP &amp; SUPPORT</a></p>
+    <p class="subheader_2">If you need immediate information you can call one of these 24-hour toll-free hotlines.</p>
+    <ul>
       {% for item in site.data.hotlines %}
-        <li class="hotline">{{item.name}}</li>
+        <li class="heads">{{item.name}}</li>
         <li class="number">{{item.number}}</li>
       {% endfor %}
     </ul>
   </div>
 </div>
-</div>
 <script>
+$('#help_line .help_toggle').click(function(){
+    $("#f").removeClass("fa-volume-control-phone");
+         $("#f").addClass("fa-times");
+			var div = $('#help_line');
+			if (div.css('right') === '-265px') {
+				$('#help_line').animate({
+					right: '0'
+				});
+				$(this).toggleClass('active');
+				$('#help_line .help_toggle').animate({
+				top: "-104px",
+				left: "0px"
+				});
+	$('#help_line .help_toggle').css({
+    '-webkit-transform': 'rotate(0deg)',
+    '-moz-transform':    'rotate(0deg)',
+    '-o-transform':      'rotate(0deg)',
+    '-ms-transform':     'rotate(0deg)'
+});
+
+
+			}
+			else {
+				$('#help_line').animate({
+					right: '-265px'
+
+				});
+				$('#help_line .help_toggle').animate({
+				top: "276px",
+				left: "-26px"
+				});
+
+	$('#help_line .help_toggle').css({
+    '-webkit-transform': 'rotate(-90deg)',
+    '-moz-transform':    'rotate(-90deg)',
+    '-o-transform':      'rotate(-90deg)',
+    '-ms-transform':     'rotate(-90deg)'
+});
+
+
+
+
+			  $("#f").addClass("fa-volume-control-phone");
+				$(this).toggleClass('active');
+			}
+			return false;
+		});
 
 
 </script>
