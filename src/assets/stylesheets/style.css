@@ -2152,7 +2152,6 @@ width: 329px;
   position: fixed;
   top: 0;
   width: 100%;
-    z-index: 22000;
 }
 
 .sticky_nav {
@@ -2164,13 +2163,13 @@ width: 329px;
     display: none;
     position: fixed;
     bottom: 21px;
-   right: auto;
+    /*right: auto;*/
     left: 200px;
     z-index: 22100;
     font-size: 0px;
     border: none;
     outline: none;
-    background-color: #FFC107;
+    background-color: #ffd275;
     color: white;
     cursor: pointer;
     padding: 9px;
@@ -2180,6 +2179,253 @@ width: 329px;
 #sc_button:hover {
   background-color: #689700;
 }
+/*end of got to top button */
+
+/*mobile menus from sidebar */
+.sticky_nav {
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky_nav {
+  padding-top: 0px;
+
+}
+
+
+ #mobile_links {
+  display: none;
+}
+.mobile_nav {
+/*display: none;*/
+ margin-top: -5px;
+  overflow: hidden;
+  background-color: #f3f3e8;
+  position: relative;
+
+}
+
+ .mobile_nav a {
+  color: white;
+  padding: 6px 24px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+ .mobile_nav a.icon {
+    background-color: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.active {
+  background-color: #e1b459;
+  color: white;
+}
+
+
+.mobile_nav_container {
+display: none;
+    margin: 0px;
+    padding: 0px;
+}
+ @media (max-width: 1026px) {
+        .mobile_nav_container {
+            display: block;
+
+        }
+          #sid{
+               display: none;
+            }
+
+.article ul li a {
+    color: black;
+    text-decoration: none;
+}
+   .mobile_nav ul li a {
+    padding: 0px;
+    font-size: 15px;
+    margin-top: -8px !important;
+   text-decoration: none;
+   color: black !important;
+
+}
+      .mobile_nav ul {
+          list-style-type: none;
+
+      }
+
+
+   .sid2 .sidebar1 ul.sidebar__items li {
+    margin-top: 5px;
+    text-decoration: none;
+    border-bottom: 0 solid;
+    font-size: 17px;
+}
+
+    .sid2 .sidebar1 ul.sidebar__items ul.sub li {
+    list-style-type: disc;
+}
+
+    .sidebar1 ul.sidebar__items ul.sub li a {
+
+    color: #1b1b1b!important;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.sidebar1 ul.sidebar__items li.current a {
+    color: #689700!important;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+    }
+
+#sid2 .sidebar1 ul.sidebar__items li {
+    font-family: FranklinGothicURW-Boo;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+/*end of mobile menus from sidebar */
+
+
+/* ***Style help line sw *** begen */
+
+#help_line{
+	position: fixed;
+	top: 295px;
+	right: -265px;
+	width: 265px;
+	margin-top: 160px;
+	z-index: 2200;
+	color: #333;
+	background-color: #f4f4f2;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+#help_line .help_toggle {
+    position: absolute;
+    top: 157px;
+    left: -112px;
+    width: 120px;
+    /* height: 51px; */
+    display: block;
+    color: #FFC107;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #689700;
+    color: white;
+    padding: -1px 0px 2px 34px;
+    border: none;
+   font-family: FranklinGothicURW-Dem;
+    text-transform: uppercase;
+}
+
+#help_line .help_toggle:hover,
+#help_line .help_toggle:focus {
+  color: #FFC107;
+   border-bottom: 3px solid #FFC107;
+}
+
+
+#help_line .help_toggle i {
+
+    font-size: 25px;
+    margin-left: -19px;
+    padding-right: 4px;
+}
+ #help_line  .help_toggle {
+    left: -27px;
+    top: 276px;
+
+ -webkit-transform: rotate(-90deg);
+    -moz-transform:    rotate(-90deg);
+    -o-transform:      rotate(-90deg);
+    -ms-transform:     rotate(-90deg);
+    transform-origin: 0 0;
+
+}
+
+
+#help_line ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+div#hots {
+    margin-top: -76px;
+    background-color: #f4f4f2;
+    margin-bottom: 0rem;
+    width: 265px;
+    box-shadow: 6px 0 13px -2px #333;
+    padding-left: 16px;
+
+}
+    #hots .header_2 a {
+    color: #689700!important;
+    border-bottom: none;
+        text-decoration: none;
+        font-size: 16px;
+            text-transform: uppercase;
+                font-family: FranklinGothicURW-Dem;
+}
+
+ #hots .subheader_2 {
+    font-family: FranklinGothicURW-Boo;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: .3em;
+        display: block;
+        font-size: 1rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+#hots ul li {
+     font-family: FranklinGothicURW-Boo;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+
+li.heads{
+    font-weight: 600!important;
+}
+ @media (max-width: 1026px) {
+#help_line .help_toggle {
+    top: 120px;
+}
+
+#help_line {
+    top: 120px;
+}
+
+}
+ /*end of Hotline css*/
+
 
 /*
   .sidebar ul.sidebar__items li.current a:hover{

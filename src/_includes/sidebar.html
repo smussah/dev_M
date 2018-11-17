@@ -1,8 +1,98 @@
 
+  <!-- Simulate a smartphone / tablet -->
+<div id="mobile_sticky" class="mobile_nav_container">
+
+<!-- Top Navigation Menu -->
+<div class="mobile_nav">
+  <a href="javascript:void(0);" onclick="mobileNav()"  class="active">In this topic....</a>
+  <div id="mobile_links" >
+      {% include mobile_menu.html %}
+
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+    <i id="f-icon" class="fa fa-chevron-down icon-3x" aria-hidden="true"></i>
+  </a>
+</div>
+
+
+<!-- End smartphone / tablet look -->
+</div>
+<!-- ****** -->
+<script>
+function mobileNav() {
+  var nav = document.getElementById("mobile_links");
+  if (nav.style.display === "block") {
+    nav.style.display = "none";
+  } else {
+
+    nav.style.display = "block";
+  }
+//   **** toggle icons ****
+ var tog = document.getElementById("f-icon");
+ tog.classList.toggle("fa-chevron-circle-up");
+}
+
+
+// When the user scrolls the page, execute obileNav()
+window.onscroll = function() {mobile_sticky();
+goTosc_topFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("mobile_sticky");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+function mobile_sticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky_nav")
+  } else {
+    navbar.classList.remove("sticky_nav");
+  }
+}
+
+
+
+//scrolling to top function --- SM
+  var go_to = 0; //
+function goTop(move_up) {
+    if (move_up.matches) {
+        // document.body.style.backgroundColor = "yellow";
+      go_to = document.getElementById("n_m");
+        document.getElementById("sc_button").style.left = "0px";
+    } else {
+    go_to = document.getElementById("gotop");
+    }
+}
+
+var move_up = window.matchMedia("(max-width: 1026px)")
+goTop(move_up)
+move_up.addListener(goTop)
+         var off_set = go_to.offsetTop;
+  //   document.getElementById("test").innerHTML = s;
+
+// window.onscroll = function() { goTosc_topFunction() };
+
+function goTosc_topFunction(){
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("sc_button").style.display = "block";
+    } else {
+        document.getElementById("sc_button").style.display = "none";
+    }
+}
+
+
+function sc_topFunction(){
+    document.body.scrollTop = off_set;
+    document.documentElement.scrollTop = off_set;
+}
+</script>
+
+
 {% if site[page.topic]  %}
- <head>
+
  <script>
- // mobile site/size hide side bar
+//   mobile site/size hide side bar
 $(window).resize(function(){
 	if ($(window).width() <= 1026){
     $(".sidebar" ).hide();
@@ -13,6 +103,7 @@ location.reload();
 
 });
 
+//main sidebar animation up/down
     $(function() {
     var footer_offset = $(".suggested").offset(); //footer offset
     var sidebar_offset = $("#sid").offset();//sidebaroff set
@@ -39,7 +130,7 @@ location.reload();
 
 
     </script>
-    </head>
+
 
 <div id="sid" class="sidebar">
   <div class="sidebar__inner">
@@ -92,72 +183,5 @@ location.reload();
 {% if page.show_repeat_rape %}
   {% include repeat_rape.html %}
 {% endif %}
-
-
-<!--
-{% if page.test_ing == true %}
-  {% include test_M.html %}
-{% endif %}
- -->
-
-
-
-
-{% if page.hotlines_sidebar == true %}
-  {% include hotlines.html %}
-{% endif %}
-
-
-<script>
-$('#help_line .help_toggle').click(function(){
-    $("#f").removeClass("fa-volume-control-phone");
-         $("#f").addClass("fa-times");
-			var div = $('#help_line');
-			if (div.css('right') === '-265px') {
-				$('#help_line').animate({
-					right: '0'
-				});
-				$(this).toggleClass('active');
-				$('#help_line .help_toggle').animate({
-				top: "-104px",
-				left: "0px"
-				});
-	$('#help_line .help_toggle').css({
-    '-webkit-transform': 'rotate(0deg)',
-    '-moz-transform':    'rotate(0deg)',
-    '-o-transform':      'rotate(0deg)',
-    '-ms-transform':     'rotate(0deg)'
-});
-
-
-			}
-			else {
-				$('#help_line').animate({
-					right: '-265px'
-
-				});
-				$('#help_line .help_toggle').animate({
-				top: "276px",
-				left: "-26px"
-				});
-
-	$('#help_line .help_toggle').css({
-    '-webkit-transform': 'rotate(-90deg)',
-    '-moz-transform':    'rotate(-90deg)',
-    '-o-transform':      'rotate(-90deg)',
-    '-ms-transform':     'rotate(-90deg)'
-});
-
-
-
-
-			  $("#f").addClass("fa-volume-control-phone");
-				$(this).toggleClass('active');
-			}
-			return false;
-		});
-
-
-</script>
 
 
