@@ -67,6 +67,7 @@ layout: default
           <h1>{{page.title}}</h1>
         {% endif %}
       </div>
+
     </div>
  <div id="gotop"></div>      <!-- *** function gotop page desktop *** -->
   </section>
@@ -77,15 +78,34 @@ layout: default
 <!--//got to top button-->
 <button onclick="sc_topFunction()" id="sc_button" title="Go to top"><i class="material-icons">arrow_upward</i></button>
 
+     <!-- Simulate a smartphone / tablet -->
+
 
   <section  class="article">
+<div id="mobile_sticky" class="mobile_nav_container">
 
+<!-- Top Navigation Menu -->
+<div id="mv" class="mobile_nav">
+  <a href="javascript:void(0);" onclick="mobileNav()"  class="active">In this topic....</a>
+  <div id="mobile_links" >
+      {% include mobile_menu.html %}
+
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="mobileNav()">Menu
+    <i id="f-icon" class="fa fa-chevron-down icon-3x" aria-hidden="true"></i>
+  </a>
+</div>
+
+</div>
+<!--end of moible menus-->
 
     <div class="container">
       <div class="copy">
+
         <div class="content-wrapper">
           {{ content }}
         </div>
+
         <div class="share">
           <!-- <a href="mailto:?subject={{page.topic}} | {{page.title}}"><i class="fa fa-envelope" aria-hidden="true"></i> email</a> -->
           <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}"><i class="fa fa-facebook" aria-hidden="true"></i> share</a>
@@ -179,15 +199,19 @@ goTosc_topFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("mobile_sticky");
+var mv = document.getElementById("mv");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
 function mobile_sticky() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky_nav")
+    navbar.classList.add("sticky_nav");
+    mv.style.top =  "47px";
+
   } else {
     navbar.classList.remove("sticky_nav");
+        mv.style.top = "34px";
   }
 }
 

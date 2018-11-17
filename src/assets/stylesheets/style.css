@@ -2200,7 +2200,7 @@ width: 329px;
 }
 .mobile_nav {
 /*display: none;*/
- margin-top: -5px;
+   margin-top: -49px;
   overflow: hidden;
   background-color: #f3f3e8;
   position: relative;
@@ -2208,6 +2208,7 @@ width: 329px;
 }
 
  .mobile_nav a {
+
   color: white;
   padding: 6px 24px;
   text-decoration: none;
@@ -2258,42 +2259,14 @@ display: none;
 }
       .mobile_nav ul {
           list-style-type: none;
-
+ margin-top: 17px;
       }
-
-
-   .sid2 .sidebar1 ul.sidebar__items li {
-    margin-top: 5px;
-    text-decoration: none;
-    border-bottom: 0 solid;
-    font-size: 17px;
-}
-
-    .sid2 .sidebar1 ul.sidebar__items ul.sub li {
-    list-style-type: disc;
-}
-
-    .sidebar1 ul.sidebar__items ul.sub li a {
-
-    color: #1b1b1b!important;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.sidebar1 ul.sidebar__items li.current a {
-    color: #689700!important;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
 
     }
 
-#sid2 .sidebar1 ul.sidebar__items li {
-    font-family: FranklinGothicURW-Boo;
-    line-height: 1.5;
-    margin: 0;
-    padding-left: 0;
+.mobile_nav ul {
     list-style-type: none;
+    margin-top: 17px;
 }
 /*end of mobile menus from sidebar */
 
@@ -2414,6 +2387,14 @@ div#hots {
 li.heads{
     font-weight: 600!important;
 }
+ @media (max-width: 1026px) {
+/*when use clicked on */
+  .article h2, .article h3{
+          padding-top: 60px;
+  }
+
+}
+
 
 @media only screen
 and (min-device-width : 375px)
@@ -2428,6 +2409,11 @@ and (orientation : portrait) {
     top: 140px;
 }
 
+/*when use clicked on */
+  .article h2, .article h3{
+          padding-top: 60px;
+  }
+
 }
 
 @media only screen
@@ -2439,6 +2425,11 @@ and (max-device-width : 1024px)  { #help_line .help_toggle {
 #help_line {
     top: 37px;
 }
+/*when use clicked on */
+  .article h2, .article h3{
+          padding-top: 60px;
+  }
+
 }
 
 /*iphon 6 7 8*/
@@ -2452,7 +2443,14 @@ and (orientation : landscape) {
 
 #help_line {
     top: 37px;
-}}
+}
+
+   /*when use clicked on */
+  .article h2, .article h3{
+          padding-top: 60px;
+  }
+
+}
 
 @media only screen
 and (min-device-width : 375px)
@@ -2463,10 +2461,17 @@ and (orientation : portrait) {     #help_line .help_toggle {
 
 #help_line {
     top: 37px;
-} }
- /*en
- /*end of Hotline css*/
+}
+/*when use clicked on */
+  .article h2, .article h3{
+          padding-top: 61px;
+  }
 
+}
+ /*end of Hotline css*/
+ .clicked_1{
+      padding-top: 60px;
+ }
 
 /*
   .sidebar ul.sidebar__items li.current a:hover{
