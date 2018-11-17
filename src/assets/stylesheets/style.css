@@ -2416,7 +2416,7 @@ li.heads{
 }
  @media (max-width: 1026px) {
 #help_line .help_toggle {
-    top: 120px;
+      top: 184px;
 }
 
 #help_line {

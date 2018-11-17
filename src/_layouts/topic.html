@@ -73,8 +73,10 @@ layout: default
 {% if page.hotlines_sidebar == true %}
   {% include hotlines.html %}
 {% endif %}
+
 <!--//got to top button-->
 <button onclick="sc_topFunction()" id="sc_button" title="Go to top"><i class="material-icons">arrow_upward</i></button>
+
 
   <section  class="article">
 
@@ -156,6 +158,72 @@ Previous</p>
   </section>
 
  <!-- end of mobile nav sm -->
+<script>//scrolling to top function --- SM
+function mobileNav() {
+  var nav = document.getElementById("mobile_links");
+  if (nav.style.display === "block") {
+    nav.style.display = "none";
+  } else {
 
+    nav.style.display = "block";
+  }
+//   **** toggle icons ****
+ var tog = document.getElementById("f-icon");
+ tog.classList.toggle("fa-chevron-circle-up");
+}
+
+
+// When the user scrolls the page, execute obileNav()
+window.onscroll = function() {mobile_sticky();
+goTosc_topFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("mobile_sticky");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+function mobile_sticky() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky_nav")
+  } else {
+    navbar.classList.remove("sticky_nav");
+  }
+}
+
+  var go_to = 0; //
+function goTop(move_up) {
+    if (move_up.matches) {
+        // document.body.style.backgroundColor = "yellow";
+      go_to = document.getElementById("n_m");
+        document.getElementById("sc_button").style.left = "0px";
+    } else {
+    go_to = document.getElementById("gotop");
+    }
+}
+
+var move_up = window.matchMedia("(max-width: 1026px)")
+goTop(move_up)
+move_up.addListener(goTop)
+         var off_set = go_to.offsetTop;
+  //   document.getElementById("test").innerHTML = s;
+
+// window.onscroll = function() { goTosc_topFunction() };
+
+function goTosc_topFunction(){
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("sc_button").style.display = "block";
+    } else {
+        document.getElementById("sc_button").style.display = "none";
+    }
+}
+
+
+function sc_topFunction(){
+    document.body.scrollTop = off_set;
+    document.documentElement.scrollTop = off_set;
+}
+</script>
+<!--end of scroll up-->
 </main>
 
