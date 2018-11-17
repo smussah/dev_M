@@ -208,7 +208,7 @@ function mobile_sticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky_nav");
     mv.style.top =  "47px";
-
+ document.getElementById("sc_button").style.left = "10px";
   } else {
     navbar.classList.remove("sticky_nav");
         mv.style.top = "5px";
@@ -220,7 +220,7 @@ function goTop(move_up) {
     if (move_up.matches) {
         // document.body.style.backgroundColor = "yellow";
       go_to = document.getElementById("n_m");
-        document.getElementById("sc_button").style.left = "10px";
+        // document.getElementById("sc_button").style.left = "10px";
 
     } else {
     go_to = document.getElementById("gotop");
