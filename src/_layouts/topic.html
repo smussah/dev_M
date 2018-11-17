@@ -251,77 +251,24 @@ function sc_topFunction(){
 
 
 
-// got to top fucntion positoning based on mediaviewports
-// function 0
-function viewPortsFunction(mediaPorts) {
-    if (mediaPorts.matches) {
-        // document.body.style.backgroundColor = "yellow";
-         document.getElementById("sc_button").style.left = "10px";
-      }
-
-  }
-
-var mediaPorts = window.matchMedia("(max-width: 700px)") //windows size
-viewPortsFunction(mediaPorts) // Call listener function at run time
-mediaPorts.addListener(viewPortsFunction)
-
-
-// function 1 position go to top button when the screen is 1200
+//function 1 position go to top button when the screen is 1200
 function viewPortsFunction1(mediaPorts1) {
     if (mediaPorts1.matches) {
-        // document.body.style.backgroundColor = "red";
-                 document.getElementById("sc_button").style.left = '1262px';
-      }
+//         document.body.style.backgroundColor = "red";
+         document.getElementById("sc_button").style.left = '12px';
 
+      }
+    else{
+          document.getElementById("sc_button").style.left = '818px';
+//              document.body.style.backgroundColor = "teal";
+    }
   }
 
-var mediaPorts1 = window.matchMedia("(min-device-width: 1200px)") //windows size
+var mediaPorts1 = window.matchMedia("(max-device-width: 1200px)") //windows size
 viewPortsFunction1(mediaPorts1) // Call listener function at run time
 mediaPorts1.addListener(viewPortsFunction1)
 
 
-// function 2
-function viewPortsFunction2(mediaPorts2) {
-    if (mediaPorts2.matches) {
-        // document.body.style.backgroundColor = "green";
-        document.getElementById("sc_button").style.left = '1562px';
-      }
-  }
-
-var mediaPorts2 = window.matchMedia("(max-device-width: 1600px)") //windows size
-viewPortsFunction2(mediaPorts2) // Call listener function at run time
-mediaPorts2.addListener(viewPortsFunction2)
-
-
-// function 3
-function viewPortsFunction3(mediaPorts3) {
-    if (mediaPorts3.matches) {
-        // document.body.style.backgroundColor = "orange";
-                //  document.getElementById("sc_button").style.right = "10px";
-                document.getElementById("sc_button").style.left = '1262px';
-      }
-  }
-
-var mediaPorts3 = window.matchMedia("(min-device-width: 1280px)") //windows size
-viewPortsFunction3(mediaPorts3) // Call listener function at run time
-mediaPorts2.addListener(viewPortsFunction3)
-
-
-
-// function for hdtv scrrens
-function viewPortsFunction4(mediaPorts4) {
-    if (mediaPorts4.matches) {
-        // document.body.style.backgroundColor = "teal";
-            // document.getElementById("sc_button").style.left = "450px";
-            document.getElementById("sc_button").style.left = '962px';
-      }
-
-
-  }
-
-var mediaPorts4 = window.matchMedia("(max-width: 1920px)") //windows size
-viewPortsFunction4(mediaPorts4) // Call listener function at run time
-mediaPorts4.addListener(viewPortsFunction4)
 </script>
 <!--end of scroll up-->
 </main>
