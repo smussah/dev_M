@@ -243,15 +243,19 @@ function goTosc_topFunction(){
         document.getElementById("sc_button").style.display = "none";
     }
 
-//     find the end of the page thn position the go to top button
-  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+//     find the end of the page then position the goto top button
+   var pageHeight= document.documentElement.offsetHeight,
+        windowHeight= window.innerHeight,
+        scrollPosition = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
 
-               document.getElementById("sc_button").style.bottom = "490px";
-document.getElementById("sc_button").style.borderRadius = "20px";
-    }
-    else {
-      document.getElementById("sc_button").style.bottom = "20px";
-    }
+//         document.getElementById("sadik").innerHTML= "Height " +pageHeight+' Windows width  :'+windowHeight+'  Scrolling possing : '+scrollPosition;
+
+        if (pageHeight <= windowHeight+scrollPosition +240) {
+               document.getElementById("sc_button").style.bottom = "494px";
+        }
+        else {
+              document.getElementById("sc_button").style.bottom = "21px";
+        }
 }
 function sc_topFunction(){
     document.body.scrollTop = off_set;
