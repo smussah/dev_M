@@ -236,18 +236,28 @@ move_up.addListener(goTop)
 // window.onscroll = function() { goTosc_topFunction() };
 
 function goTosc_topFunction(){
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
         document.getElementById("sc_button").style.display = "block";
     } else {
         document.getElementById("sc_button").style.display = "none";
     }
+
+//     find the end of the page thn position the go to top button
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+
+               document.getElementById("sc_button").style.bottom = "490px";
+document.getElementById("sc_button").style.borderRadius = "20px";
+    }
+    else {
+      document.getElementById("sc_button").style.bottom = "20px";
+    }
 }
-
-
 function sc_topFunction(){
     document.body.scrollTop = off_set;
     document.documentElement.scrollTop = off_set;
 }
+
+
 
 
 
