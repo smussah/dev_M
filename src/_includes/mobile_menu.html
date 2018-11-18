@@ -1,5 +1,6 @@
 
     {% if site[page.topic]  %}
+
 <style>ul.mob_m li.current a {
     color: #689700!important;
     font-weight: 700;
@@ -30,9 +31,7 @@ ul.mob_m ul.sub1 li {
 }
 </style>
 
-  <div id="sid2" class="sidebar1">
-  <div class="sidebar__inner">
-      <ul class="sidebar__items">
+  <ul class="mob_m">
 
         {% assign sorted = site[page.topic] | sort: 'order' %}
         {% assign sorted = sorted | where: "published", "true" %}
@@ -43,7 +42,7 @@ ul.mob_m ul.sub1 li {
           {% endif %}
         <li class="{{current}}"><a href="{{doc.url}}">{{doc.title}}</a>
           {% if page.url contains doc.subcollection %}
-            <ul class="sidebar__items sub">
+            <ul class="mob_m sub1">
               {% assign sortedInfo = site[doc.subcollection] | sort: 'order' %}
               {% for doc in sortedInfo %}
               {% assign current = nil %}
@@ -57,11 +56,7 @@ ul.mob_m ul.sub1 li {
         </li>
         {% endfor %}
       </ul>
-  </div>
-</div>
+<!--  </div>-->
+<!--</div>-->
 
 {% endif %}
-
-
-
-
