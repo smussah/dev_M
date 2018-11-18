@@ -197,18 +197,18 @@ function mobileNav() {
 window.onscroll = function() {mobile_sticky();
 goTosc_topFunction()};
 
-// Get the navbar
+
 var navbar = document.getElementById("mobile_sticky");
 var mv = document.getElementById("mv");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+
+var sticky = navbar.offsetTop+1200;
 
 function mobile_sticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky_nav");
     mv.style.top =  "47px";
-//  document.getElementById("sc_button").style.left = "10px";
+
   } else {
     navbar.classList.remove("sticky_nav");
         mv.style.top = "5px";
