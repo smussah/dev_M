@@ -194,27 +194,54 @@ function mobileNav() {
 
 
 // When the user scrolls the page, execute obileNav()
-window.onscroll = function() {mobile_sticky();
+window.onscroll = function() {
 goTosc_topFunction()};
 
 
-var navbar = document.getElementById("mobile_sticky");
-var mv = document.getElementById("mv");
+// var navbar = document.getElementById("mobile_sticky");
+// var mv = document.getElementById("mv");
+//
+//
+// var sticky = navbar.offsetTop+600;
+//
+// function mobile_sticky() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky_nav");
+//     mv.style.top =  "47px";
+//
+//   } else {
+//     navbar.classList.remove("sticky_nav");
+//        mv.style.top = "16px";
+//       mv.style.marginBottom = "23px";
+//   }
+// }
+
+// Get the navbar
 
 
-var sticky = navbar.offsetTop+600;
+$(function(){
 
-function mobile_sticky() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky_nav");
-    mv.style.top =  "47px";
+    var sticky =  $('#mobile_sticky').offset().top+600;
+  $(window).scroll(function(){
+var pagoffset = $(window).scrollTop();
+var x_space = $(".article h2, .article h3");
 
-  } else {
-    navbar.classList.remove("sticky_nav");
-       mv.style.top = "16px";
-      mv.style.marginBottom = "23px";
-  }
+ if( pagoffset >=sticky){
+  $('#mobile_sticky').addClass('sticky_nav');
+  $('#mv').css('top', "47px");
+  x_space.addClass('we');
+ }
+else{
+  $('#mobile_sticky').removeClass('sticky_nav');
+  x_space.removeClass('try');
+  $('#mv').css('top', "16px");
+  $("#mv").css("margin-bottom", "23px");
+
 }
+
+});
+});
+
 
  var go_to = 0; //
 function goTop(move_up) {
