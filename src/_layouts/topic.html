@@ -221,7 +221,7 @@ goTosc_topFunction()};
 
 $(function(){
 
-    var sticky =  $('#mobile_sticky').offset().top+600;
+ var sticky =  $('#mobile_sticky').offset().top+600;
   $(window).scroll(function(){
 var pagoffset = $(window).scrollTop();
 var x_space = $(".article h2, .article h3");
@@ -251,13 +251,12 @@ else{
 function goTop(move_up) {
     if (move_up.matches) {
        // ************header space ****************8
- $(".onpage a").click(function () {
+        $(".onpage a").click(function() {
         var headerT = $(this).attr("href");
-
-       $('h2'+headerT).css("padding-top", "60px");
-
-
-    });
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(headerT).offset().top -56
+    }, 2000);
+});
     //end ************header space ****************8
 
         // document.body.style.backgroundColor = "yellow";
