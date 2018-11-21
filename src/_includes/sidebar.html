@@ -1,48 +1,4 @@
-
-
-
 {% if site[page.topic]  %}
-
- <script>
-//   mobile site/size hide side bar
-$(window).resize(function(){
-	if ($(window).width() <= 1026){
-    $(".sidebar" ).hide();
-	}
-	else{
-location.reload();
-}
-
-});
-
-//main sidebar animation up/down
-    $(function() {
-    var footer_offset = $(".suggested").offset(); //footer offset
-    var sidebar_offset = $("#sid").offset();//sidebaroff set
-     var footer_position = footer_offset.top - $("#sid").outerHeight() - 30;//footer position
-    var topPadding = 15;
-
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > sidebar_offset.top) {
-                    if(  $(window).scrollTop() < footer_position ) {
-                    $("#sid").stop().animate({
-                        marginTop: $(window).scrollTop() - sidebar_offset.top + topPadding
-                    });
-
-                }
-                }
-                else {
-                    $("#sid").stop().animate({
-                        marginTop: 0
-                    });
-                };
-            });
-        });
-
-
-
-    </script>
-
 
 <div id="sid" class="sidebar">
   <div class="sidebar__inner">
@@ -95,5 +51,3 @@ location.reload();
 {% if page.show_repeat_rape %}
   {% include repeat_rape.html %}
 {% endif %}
-
-
